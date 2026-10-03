@@ -1,0 +1,16 @@
+# Datasets — downloaded by script, never committed
+data/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# AI assistant working notes (not a project artefact)
+CLAUDE.md

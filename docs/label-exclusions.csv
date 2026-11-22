@@ -13,6 +13,7 @@ plantdoc/train/Potato leaf early blight/20080710-early%2Bblight%2Blesions%2Bwith
 plantdoc/train/Potato leaf early blight/20100816earlyblight.jpg,87117d4e95c529d9aa3785384502c170,Potato leaf early blight,21,wrong_crop,visual,"lobed, toothed tomato leaflets"
 plantdoc/train/Potato leaf early blight/21-late%20blight-early%20symptoms%20potato.jpg,f7c159d146a4448a3837f3b07805a214,Potato leaf early blight,22,other_disease,filename,"filename says late blight, early symptoms"
 plantdoc/train/Potato leaf early blight/2D1A9552.jpg,c2c0a6f3a2026aa45dbf653b869d6e9a,Potato leaf early blight,25,other_disease,visual,large irregular grey-brown lesions without concentric rings: late blight
+plantdoc/train/Potato leaf early blight/2OBH_29_Gardening_early_blight.jpg,604a18f373069bae8874d182568a8cde,Potato leaf early blight,26,wrong_crop,visual,"tomato plant (lobed, toothed leaflets, tomato fruit); same photo as TEB#30, kept there"
 plantdoc/train/Potato leaf early blight/36-early-blight-concentric-rings.jpg,e829f347b0a2d89aebe04977849fac14,Potato leaf early blight,27,wrong_crop,visual,"lobed, toothed tomato leaflets"
 plantdoc/train/Potato leaf early blight/3785483636_d888419c98_o.jpg,6d065fb05b9dffe3991abd1af84ad437,Potato leaf early blight,28,wrong_crop,visual,"lobed, toothed tomato leaflets"
 plantdoc/train/Potato leaf early blight/45035_1.jpg,c1ea46f5d0b9f1171a65cb4ac5e06e93,Potato leaf early blight,29,in_other_folder,duplicate,"same photo also filed as late blight; filename names late blight, late blight copy kept"
@@ -34,6 +35,7 @@ plantdoc/train/Potato leaf early blight/a_solani.jpg,f27f7b828329c449d278ab1a781
 plantdoc/train/Potato leaf early blight/backus-045-potato-blight.jpg,a7710b5901ba1f8e9759ef7576cd9f09,Potato leaf early blight,63,other_disease,visual,large irregular grey-brown lesions without concentric rings: late blight
 plantdoc/train/Potato leaf early blight/blight-leaf-top.jpg,55fac197afb3179fc4852d622a35bb10,Potato leaf early blight,65,other_disease,visual,large irregular grey-brown lesions without concentric rings: late blight
 plantdoc/train/Potato leaf early blight/early%20blight.tom_.jpg,83864b05770af35b46f2822283fe87d0,Potato leaf early blight,68,wrong_crop,filename,filename ends .tom_; same sand-background series as EB#20
+plantdoc/train/Potato leaf early blight/early-blight-closeup-NCSU.jpg,e41b50acd994890b089f900935bdd2b4,Potato leaf early blight,71,wrong_crop,visual,"tomato plant (lobed, toothed leaflets, tomato fruit); same photo as TEB#56, kept there"
 plantdoc/train/Potato leaf early blight/early-blight-or-target-spot-alternaria-solani-lesions-on-a-tomato-by9j8r.jpg,f1985534933209ddda6cf43a4a599c81,Potato leaf early blight,74,wrong_crop,filename,filename says lesions on a tomato
 plantdoc/train/Potato leaf early blight/early-blight-or-targfet-spot-alternaria-solani-lesions-on-a-tomato-ACG8W6.jpg,e3e710f4403d87dee8dad5e5997bc80a,Potato leaf early blight,75,wrong_crop,filename,filename says lesions on a tomato
 plantdoc/train/Potato leaf early blight/early-blight-septoria-ls-fig-1.jpg,5e6f3e06b0d60ef0266f47fbfbe716d0,Potato leaf early blight,77,wrong_crop,visual,"lobed, toothed tomato leaflets"
@@ -56,6 +58,7 @@ plantdoc/test/Potato leaf late blight/20090710-lateblight.jpg,557b53be37510b137a
 plantdoc/test/Potato leaf late blight/5816740026_d42ef24413_Phytophthora-Infestans.jpg,e4aff68ead58ba22a411c93db3a630af,Potato leaf late blight,4,wrong_crop,visual,"lobed, toothed tomato leaflets"
 plantdoc/train/Potato leaf late blight/IMG_0019.jpg,aa1bdbaf7db5ac9e9b5daddbae0a158b,Potato leaf late blight,28,wrong_crop,visual,"lobed, toothed tomato leaflets"
 plantdoc/train/Potato leaf late blight/IMG_5358.jpg,fdc11b495424b354a14902a9e2786a52,Potato leaf late blight,29,wrong_crop,visual,"lobed, toothed tomato leaflets"
+plantdoc/train/Potato leaf late blight/IMG_5813-1024x768.jpg,5e7d02479e21ee88bc33943b2941597c,Potato leaf late blight,31,wrong_crop,visual,"tomato leaf on a stake; same photo as TLB#27, kept there"
 plantdoc/train/Potato leaf late blight/Late+Blight+of+Potato+and+Tomato.jpg,0d22dc59c3015188306f0e7be11d3929,Potato leaf late blight,34,unusable,visual,lecture slide with title text
 plantdoc/train/Potato leaf late blight/Late-Blight-56a34bc55f9b58b7d0d15210.jpg,022c2bafe34b31eaffd15ab31120de8c,Potato leaf late blight,37,wrong_crop,visual,"lobed, toothed tomato leaflets"
 plantdoc/train/Potato leaf late blight/Late-blight.jpg,efbed0a31977675389fab11680f767b8,Potato leaf late blight,41,wrong_crop,visual,"lobed, toothed tomato leaflets"
@@ -67,3 +70,174 @@ plantdoc/train/Potato leaf late blight/potato-solanum-tuberosum-late-blight.jpg,
 plantdoc/train/Potato leaf late blight/potato_late-blight_02_zoom.jpg,15e45f48ad774abd9669a4847787027d,Potato leaf late blight,96,unusable,visual,multi-panel composite
 plantdoc/train/Potato leaf late blight/potato_ocw_botrytis-lateblight.jpg,cdce46d242be225636990ebacdf999d4,Potato leaf late blight,100,two_diseases,visual,two panels: Botrytis grey mould and late blight
 plantdoc/train/Potato leaf late blight/potato_ocw_lateblight-earlyblight.jpg,a51ff24bb82ee011703fc0e23366a6cb,Potato leaf late blight,101,two_diseases,visual,two panels: late blight and early blight
+plantdoc/test/Tomato Early blight leaf/039b47d574bc4bb8a14259a1cd96a741.jpg,fa1a22838e982e0efba0a722731c6b3b,Tomato Early blight leaf,1,unusable,caption,"presentation slide, two panels; caption names Septoria leaf spot and early blight"
+plantdoc/train/Tomato Early blight leaf/126689-004-D622CD2F.jpg,9f68685ef8b7fbc12e5e2ca4432f2997,Tomato Early blight leaf,12,in_other_folder,duplicate,"same photo as potato LB#54 (Symptom_potato_late_blight.jpg), kept there; reddish lesions, no rings"
+plantdoc/train/Tomato Early blight leaf/FS547-2-big.jpg,ae16de397264ee3280140c2d41ff7522,Tomato Early blight leaf,32,wrong_crop,visual,broad smooth-edged potato leaflet
+plantdoc/train/Tomato Early blight leaf/IMG_0591.jpg,641b3bebf1971b7454ad5283787f7e61,Tomato Early blight leaf,33,wrong_crop,visual,broad smooth-edged potato leaflet
+plantdoc/train/Tomato Early blight leaf/MPC105550.jpg.rendition.largest.ss.jpg,91b73883bde1fea344b6cbff96d73a43,Tomato Early blight leaf,35,in_other_folder,visual,"same photo as Septoria TSP#54; small spots on yellowing lower leaves: judged Septoria, Septoria copy kept"
+plantdoc/train/Tomato Early blight leaf/Tomato-blight-large.jpg,af17d66a9b311f359a7a1d79ba2b9731,Tomato Early blight leaf,43,wrong_crop,visual,broad smooth-edged potato leaflet
+plantdoc/train/Tomato Early blight leaf/Tomato-diseases-prevention-treatment.-Early-blight..jpg,4f9ce949b194c882e314f99650f154ed,Tomato Early blight leaf,44,wrong_crop,visual,smooth-edged potato leaves
+plantdoc/train/Tomato Early blight leaf/b54d0e40027ff5e90e8ba7e1e9abf9bd--garden-guide-garden-ideas.jpg,9041ce3fb39bd7fa81f09c2a0dafb84c,Tomato Early blight leaf,47,in_other_folder,visual,"same photo as Septoria TSP#79; many small scattered spots, no rings: Septoria. Septoria copy to be confirmed in its own review"
+plantdoc/train/Tomato Early blight leaf/earlyblight.jpg,a8022c7fdb8cc7642b5d8f105f576904,Tomato Early blight leaf,67,unusable,visual,two-panel composite (leaf and stem)
+plantdoc/train/Tomato Early blight leaf/earlyblightpotato.jpg,d2c45e81c5de5a2f731829ed491e8df5,Tomato Early blight leaf,68,wrong_crop,filename,"filename earlyblightpotato.jpg; same photo as potato EB#5, kept there; smooth potato leaf"
+plantdoc/train/Tomato Early blight leaf/ebleafb.jpg,eac496b99c4965b4cb1271c88e3d0796,Tomato Early blight leaf,71,wrong_crop,duplicate,"same photo as potato EB#76 (early-blight-potatoes.jpg), kept there; broad smooth-edged potato leaf"
+plantdoc/train/Tomato Early blight leaf/p1020083cs.jpg,448c75fdfeb11f782f1b1d2dac33fd20,Tomato Early blight leaf,75,other_disease,visual,"diffuse pale-brown blotches with yellow margins, no rings: late blight; same photo series as TLB#110 (p10200xx)"
+plantdoc/train/Tomato Early blight leaf/p1020084s.jpg,a035219b31920b7eb720785b74822fa1,Tomato Early blight leaf,76,in_other_folder,duplicate,"same photo as TLB#110 (tomato_late-blight_04_zoom.jpg); diffuse blotches, no rings: late blight copy kept"
+plantdoc/train/Tomato Early blight leaf/tomato-blight-phytophthora-infestans-early-stages-on-tomato-plant-b5n952.jpg,e958ba22a3272743903083f35066e189,Tomato Early blight leaf,78,other_disease,filename,filename names Phytophthora infestans (late blight)
+plantdoc/train/Tomato Early blight leaf/tomato_blight_early.jpg,a53793b57ac5be839d6e7855de36cdfb,Tomato Early blight leaf,82,unusable,visual,"botanical illustration, not a photograph"
+plantdoc/train/Tomato leaf late blight/IMG_2254.JPG.jpg,87211790c33baed33429c58e65865e26,Tomato leaf late blight,23,other_disease,visual,small dark spots with concentric rings and yellow halos: early blight
+plantdoc/train/Tomato leaf late blight/LBleaf2INIA_0.jpg,4babaedef1709d2ecac2a55d78a22b8b,Tomato leaf late blight,29,wrong_crop,visual,"broad smooth-edged potato leaf; same photo as potato EB#38, excluded there as late blight"
+plantdoc/train/Tomato leaf late blight/Late_Blight_2.jpg,7b52e68439bcc8c7a5a13425be5f3e9d,Tomato leaf late blight,42,unusable,visual,two-panel composite (leaf and fruit)
+plantdoc/train/Tomato leaf late blight/Pest2369.jpg,497466f89ddffe44c142082b69ff3ffe,Tomato leaf late blight,44,other_disease,filename,same photo as potato EB#43 (Early-Blight-Leaves-...jpg); lesions with concentric rings: early blight
+plantdoc/train/Tomato leaf late blight/a7710b5901ba1f8e9759ef7576cd9f09.jpg,c01bd552f8df1930fcbdabb97a369e2f,Tomato leaf late blight,54,wrong_crop,filename,same photo as potato EB#63 (backus-045-potato-blight.jpg); potato plant
+plantdoc/train/Tomato leaf late blight/symptoms_of_late_blight_0.jpg,2f6d0d038112e81273de9608ca6394a7,Tomato leaf late blight,92,wrong_crop,filename,"same photo as potato LB#32 (Jessore-potato-late-blight-...jpg), kept there; potato leaves"
+plantdoc/train/Tomato leaf late blight/tomato+blight.jpg,b50ce7a9dbd36f773590add5cb75ee14,Tomato leaf late blight,93,unusable,visual,two-panel composite (leaf and fruit)
+plantdoc/train/Tomato leaf late blight/tomato.early.blightH.jpg,6072348280a3a8f26a1b369fce36930a,Tomato leaf late blight,106,other_disease,filename,filename tomato.early.blightH.jpg
+plantdoc/test/Tomato leaf bacterial spot/%2320+Bacterial+Spot+and+Speck.jpg,f3b92dadcc0b2272223af4dfc4496d66,Tomato leaf bacterial spot,1,unusable,visual,presentation slide
+plantdoc/test/Tomato leaf bacterial spot/07.17.18-Common_Tomato_Diseases_Canker-258x300.jpg,03471392f4ed6981b8c1ee9635859489,Tomato leaf bacterial spot,2,other_disease,filename,"filename names bacterial canker, a different disease"
+plantdoc/test/Tomato leaf bacterial spot/Bacterial_spots563.jpg,c44b095e2690b59821b3b84323d92cba,Tomato leaf bacterial spot,3,wrong_crop,visual,"simple, smooth-edged pepper-like leaves, not tomato"
+plantdoc/test/Tomato leaf bacterial spot/Tom_Bact3.jpg,91ed7f14422ca75f12e90e6f91854a65,Tomato leaf bacterial spot,4,unusable,visual,multi-panel composite
+plantdoc/test/Tomato leaf bacterial spot/bact-spot-fig-1.jpg,cf445f58fb1e8a95b56360cf99b458f3,Tomato leaf bacterial spot,7,wrong_crop,visual,"simple, smooth-edged pepper-like leaves, not tomato"
+plantdoc/test/Tomato leaf bacterial spot/tomato_V8.jpg,1fc7b6d3ecba2fe90bbf8f6078fd7e45,Tomato leaf bacterial spot,8,in_other_folder,visual,"same photo as TSP#140, also filed under Septoria; small spots with pale centres: Septoria, Septoria copy kept"
+plantdoc/test/Tomato leaf bacterial spot/tomato_bacterial-speck_01_zoom.jpg,6dd2b8d3db70760e656878097e977326,Tomato leaf bacterial spot,9,other_disease,filename,"filename names bacterial speck, a different disease"
+plantdoc/train/Tomato leaf bacterial spot/05-069f1.jpg,1d98ce45d160304481da12724d363bcf,Tomato leaf bacterial spot,10,wrong_crop,visual,"simple, smooth-edged pepper-like leaves, not tomato"
+plantdoc/train/Tomato leaf bacterial spot/05-069f12.jpg,b740c73e39b68024b508afaad35de34a,Tomato leaf bacterial spot,11,wrong_crop,visual,"simple, smooth-edged pepper-like leaves, not tomato"
+plantdoc/train/Tomato leaf bacterial spot/05-069f9.jpg,14611750f3a418ff9ad9583f817ee226,Tomato leaf bacterial spot,12,wrong_crop,visual,"simple, smooth-edged pepper-like leaves, not tomato"
+plantdoc/train/Tomato leaf bacterial spot/10-3-bacterial-speck-on-tomato-RON.jpg,391a51d7f3e797ac53dbc527542537ef,Tomato leaf bacterial spot,13,other_disease,filename,"filename names bacterial speck, a different disease"
+plantdoc/train/Tomato leaf bacterial spot/38849847120_7ae02bd6c3_b.jpg,71834a03ec74620d0fef6896bd3a88b7,Tomato leaf bacterial spot,20,wrong_crop,visual,"glossy palmate leaves (hibiscus-like), not tomato"
+plantdoc/train/Tomato leaf bacterial spot/39765006175_e2f0da764d_b.jpg,c48de8bf47077f093c2edf2129e2f704,Tomato leaf bacterial spot,21,wrong_crop,visual,"glossy palmate leaves (hibiscus-like), not tomato"
+plantdoc/train/Tomato leaf bacterial spot/3bacterial-canker1.jpg,72e91979f3570b57fe521ab27ff4ab47,Tomato leaf bacterial spot,22,other_disease,filename,"filename names bacterial canker, a different disease"
+plantdoc/train/Tomato leaf bacterial spot/Bacterial+Speck+-+Tomatoes.jpg,caa738c5682c286e53c798de22ed63a2,Tomato leaf bacterial spot,29,other_disease,filename,"filename names bacterial speck, a different disease"
+plantdoc/train/Tomato leaf bacterial spot/Bacterial-speck-tomato-leaves.jpg,7c7b0b5d1c1918326e4841d19a2881d2,Tomato leaf bacterial spot,33,other_disease,filename,"filename names bacterial speck, a different disease"
+plantdoc/train/Tomato leaf bacterial spot/BacterialSpot06.jpg,c2be5f57b2db1d10a0d2590d28c79632,Tomato leaf bacterial spot,36,unusable,visual,multi-panel composite
+plantdoc/train/Tomato leaf bacterial spot/BacterialSpot07.jpg,b7c5e35c229985ba76b9051f178f65bc,Tomato leaf bacterial spot,37,unusable,visual,multi-panel composite
+plantdoc/train/Tomato leaf bacterial spot/Bacterial_spots1300.jpg,6db0d624e248d478f084953fb322c74f,Tomato leaf bacterial spot,38,wrong_crop,visual,"palmately lobed leaves with purple spots, not tomato"
+plantdoc/train/Tomato leaf bacterial spot/Bacterial_spots2276.jpg,a10e62f1f7557bc7e3fd9ea65c7ef5b2,Tomato leaf bacterial spot,39,wrong_crop,visual,"simple, smooth-edged pepper-like leaves, not tomato"
+plantdoc/train/Tomato leaf bacterial spot/Bacterial_spots2277.jpg,31cf71c04bb572705d1fafd6c3be7a3e,Tomato leaf bacterial spot,40,wrong_crop,visual,"simple, smooth-edged pepper-like leaves, not tomato"
+plantdoc/train/Tomato leaf bacterial spot/Bacterial_spots562.jpg,d82d46f50586f29a9dba94d5a7aa376d,Tomato leaf bacterial spot,41,wrong_crop,visual,"simple, smooth-edged pepper-like leaves, not tomato"
+plantdoc/train/Tomato leaf bacterial spot/Bacterial_spots586.jpg,241a6737f2e960131c389a9a76f1d5f8,Tomato leaf bacterial spot,42,wrong_crop,visual,"simple, smooth-edged pepper-like leaves, not tomato"
+plantdoc/train/Tomato leaf bacterial spot/Canker-GHTom-CAG-leaf-collapse-copy-50-QUALITY-1ur7cyk.jpg,c23a204e0fd0d99cf4aa203477a0bc67,Tomato leaf bacterial spot,43,other_disease,filename,"filename names bacterial canker, a different disease"
+plantdoc/train/Tomato leaf bacterial spot/CankerFoliar-copy-50-QUALITY-122b09b.jpg,6fd7f4953a0f8c3668e4c51d7cb528ee,Tomato leaf bacterial spot,44,other_disease,filename,"filename names bacterial canker, a different disease"
+plantdoc/train/Tomato leaf bacterial spot/CankerRhiemsFiring1-copy-50-QUALITY-16lcw30.jpg,48253604661d2812aa401d93eed9cabc,Tomato leaf bacterial spot,45,other_disease,filename,"filename names bacterial canker, a different disease"
+plantdoc/train/Tomato leaf bacterial spot/FS547-4-big.jpg,1f6b09f3158c67fa6d0f8647389de204,Tomato leaf bacterial spot,46,in_other_folder,visual,"same photo as TSP#57; small spots with pale centres and dark borders: Septoria, Septoria copy kept"
+plantdoc/train/Tomato leaf bacterial spot/IN0335.jpg,c5011a2a5a3cb1a91687e8c5da7faeaf,Tomato leaf bacterial spot,50,unusable,visual,multi-panel composite
+plantdoc/train/Tomato leaf bacterial spot/TC6-300x194.jpg,f637d931caffccd778cecec016ff4c56,Tomato leaf bacterial spot,62,wrong_crop,visual,"cucurbit leaf, not tomato"
+plantdoc/train/Tomato leaf bacterial spot/Tomato%20bacterial%20canker.JPG.jpg,f420b1274c227bf07f905a053ba5952d,Tomato leaf bacterial spot,63,other_disease,filename,"filename names bacterial canker, a different disease"
+plantdoc/train/Tomato leaf bacterial spot/Tomato%20greenhouse%20phythotoxicity03F.JPG.jpg,cd6bd06e92ab411a01401045483bcbfd,Tomato leaf bacterial spot,64,other_disease,filename,filename names phytotoxicity
+plantdoc/train/Tomato leaf bacterial spot/Tomato-Canker-Marginal-Necrosis-Leaf-GH-Guat-50-QUALITY-10e6dzu.jpg,2509b30860ef2b4ca5225a1b08673ab6,Tomato leaf bacterial spot,65,other_disease,filename,"filename names bacterial canker, a different disease"
+plantdoc/train/Tomato leaf bacterial spot/a3fb24f84fe70e5d37352d13106531d6.jpg,f93860b40dde3d9e04a29c5a24d06b88,Tomato leaf bacterial spot,68,unusable,visual,presentation slide
+plantdoc/train/Tomato leaf bacterial spot/alter_cank2-150x150.jpg,93d0fcd229c89b9b362f9d9b5791ac30,Tomato leaf bacterial spot,69,other_disease,filename,filename names Alternaria stem canker
+plantdoc/train/Tomato leaf bacterial spot/b-speck.jpg,59809840f48a9ecd116852e244bd2728,Tomato leaf bacterial spot,70,other_disease,filename,"filename names bacterial speck, a different disease"
+plantdoc/train/Tomato leaf bacterial spot/bac-canker.jpg,c7eb4dbb910cc9a85bfaadbf45d0a58a,Tomato leaf bacterial spot,71,other_disease,filename,"filename names bacterial canker, a different disease"
+plantdoc/train/Tomato leaf bacterial spot/bac-spot.jpg,03696a8b9540e87823cf6bba32b1be37,Tomato leaf bacterial spot,72,unusable,visual,multi-panel composite
+plantdoc/train/Tomato leaf bacterial spot/bac.jpg,90660b1d43fa99819682f693fa20f2e6,Tomato leaf bacterial spot,73,unusable,visual,multi-panel composite
+plantdoc/train/Tomato leaf bacterial spot/bacterial%20leaf%20spot.jpg,06b1b3caacdc974189d0d8144d0a3f88,Tomato leaf bacterial spot,77,wrong_crop,visual,"chrysanthemum-like leaves, not tomato"
+plantdoc/train/Tomato leaf bacterial spot/bacterial-canker3x2400-2ia1kgd.jpg,78e5120d4078348095896eecd5ca36ba,Tomato leaf bacterial spot,78,other_disease,filename,"filename names bacterial canker, a different disease"
+plantdoc/train/Tomato leaf bacterial spot/bacterial-canker4x640-1nz1vm7.jpg,fbccd4125bc05fe34108398b6172d216,Tomato leaf bacterial spot,79,other_disease,filename,"filename names bacterial canker, a different disease"
+plantdoc/train/Tomato leaf bacterial spot/bacterial-speck-tomato-2.jpg,cac5af75dbdff0dd8e3f12d9bfe5529e,Tomato leaf bacterial spot,81,other_disease,filename,"filename names bacterial speck, a different disease"
+plantdoc/train/Tomato leaf bacterial spot/bacterial-speck-tomato-3.jpg,584580e02737ff526cbae406f9a45020,Tomato leaf bacterial spot,82,other_disease,filename,"filename names bacterial speck, a different disease"
+plantdoc/train/Tomato leaf bacterial spot/bacterial-speck-tomato1x2400-275mmny.jpg,a0c117519521a6ad616c8168ce02d6f1,Tomato leaf bacterial spot,83,other_disease,filename,"filename names bacterial speck, a different disease"
+plantdoc/train/Tomato leaf bacterial spot/bacterial-spot-of-tomato-6-638.jpg,179a067260596c68c65ce9d8d7562336,Tomato leaf bacterial spot,84,unusable,visual,presentation slide
+plantdoc/train/Tomato leaf bacterial spot/bacterial-spot-of-tomato-7-638.jpg,6bc90da5c35bdcd50540fb72307fd2af,Tomato leaf bacterial spot,85,unusable,visual,presentation slide
+plantdoc/train/Tomato leaf bacterial spot/bacterialSpeck03510339f27656b-1scmgh1.jpg,7193983adaee5c086a29a8243bd351b7,Tomato leaf bacterial spot,88,other_disease,filename,"filename names bacterial speck, a different disease"
+plantdoc/train/Tomato leaf bacterial spot/bc34aec4ea7f60a64e380fda44c2f380.jpg,14f8f4484b75ac476024d45e93d4dd03,Tomato leaf bacterial spot,90,wrong_crop,visual,cannabis leaf
+plantdoc/train/Tomato leaf bacterial spot/beg.jpg,abd032a877b5899ded92b2b651a56d94,Tomato leaf bacterial spot,91,wrong_crop,visual,begonia
+plantdoc/train/Tomato leaf bacterial spot/latest?cb=20100808132744.jpg,f324159c961432247112682acfee1b5d,Tomato leaf bacterial spot,97,wrong_crop,visual,"large lobed scanned leaf (squash or grape-like), not tomato"
+plantdoc/train/Tomato leaf bacterial spot/my-plant-has-brown-spots-leaf-spot-and-canker-on-dogwood.jpg,15434c7c17d5b95ce810171a3916563c,Tomato leaf bacterial spot,99,wrong_crop,filename,filename names dogwood
+plantdoc/train/Tomato leaf bacterial spot/patarea-bacteriana-frunzelor-pseudomonas-syringae-maculicola-31_5_2.jpg,d52a121130fdad8ff54f0acb83bba226,Tomato leaf bacterial spot,100,wrong_crop,filename,filename names Pseudomonas syringae pv. maculicola (a brassica pathogen); brassica leaf
+plantdoc/train/Tomato leaf bacterial spot/tomato_bacterial-speck_03_zoom.jpg,a9866d68cbcf65e80f6d698739947cfc,Tomato leaf bacterial spot,109,other_disease,filename,"filename names bacterial speck, a different disease"
+plantdoc/test/Tomato Septoria leaf spot/0.jpg,a27db6dc8df5f08762c1d32c2ebafc0f,Tomato Septoria leaf spot,1,unusable,visual,"presentation slide (Missouri Botanical Garden), two panels and text"
+plantdoc/test/Tomato Septoria leaf spot/early-blight-septoria-ls-fig-3.jpg,3311a7162f523ef7dc4f5b02033d6ecf,Tomato Septoria leaf spot,10,two_diseases,filename,filename names early blight and Septoria
+plantdoc/train/Tomato Septoria leaf spot/early-blight-septoria-ls-fig-3.jpg,3311a7162f523ef7dc4f5b02033d6ecf,Tomato Septoria leaf spot,10,two_diseases,filename,filename names early blight and Septoria
+plantdoc/train/Tomato Septoria leaf spot/140714+%2811%29.JPG.jpg,67d135056cd81e2a5748d419d5e43d6a,Tomato Septoria leaf spot,13,wrong_crop,visual,"smooth oval leaves, not tomato"
+plantdoc/train/Tomato Septoria leaf spot/1b.jpg,a12cde80d574431743db47ee5887f7e2,Tomato Septoria leaf spot,14,wrong_crop,visual,"woody shrub with simple leaves, not tomato"
+plantdoc/train/Tomato Septoria leaf spot/20100824septoria.jpg,34702ab0a40559d84bd583489b71ac4b,Tomato Septoria leaf spot,17,unusable,visual,two-panel composite
+plantdoc/train/Tomato Septoria leaf spot/28018723549_3a16c1467b_b.jpg,2adc0a45fd1cc993914d097ef7a7d45b,Tomato Septoria leaf spot,20,wrong_crop,visual,"palmate glossy leaves (hibiscus-like), not tomato"
+plantdoc/train/Tomato Septoria leaf spot/3-septoria-leaf-blight-n.jpg,eac10419b9223cae8c69b6c549c3dfab,Tomato Septoria leaf spot,21,unusable,visual,presentation slide with text
+plantdoc/train/Tomato Septoria leaf spot/3893.jpg,fe27af68e35f95de11730c421e54d138,Tomato Septoria leaf spot,23,other_disease,caption,"caption names Xanthomonas vesicatoria (bacterial spot); simple-leaved plant, likely pepper"
+plantdoc/train/Tomato Septoria leaf spot/46-Septoria-leaf-spot.jpg,93a74a5d93ee5f0cdd82e1c94e87006d,Tomato Septoria leaf spot,24,unusable,visual,greyscale drawing or scan
+plantdoc/train/Tomato Septoria leaf spot/5008922249_880e15c21f.jpg,d370a6dc424fcc78142b80324b5c3a0d,Tomato Septoria leaf spot,27,wrong_crop,caption,"simple elliptical leaf, not tomato; same photo as TSP#118, whose caption names Septoria albopunctata (a blueberry pathogen)"
+plantdoc/train/Tomato Septoria leaf spot/Bean-rust-on-leaves.jpg,f441d6f996650b57ee9f54d95a4f9d51,Tomato Septoria leaf spot,47,wrong_crop,filename,filename Bean-rust-on-leaves; bean trifoliate leaves
+plantdoc/train/Tomato Septoria leaf spot/Septoria+Leaf+Spot.jpg,2d43fbb8c553e5452994650d9a5ac055,Tomato Septoria leaf spot,59,unusable,visual,presentation slide
+plantdoc/train/Tomato Septoria leaf spot/Tomato%20bacterial%20spot%20closeup-050S.JPG.jpg,95bb8754364a716d841ee86a80c59a6f,Tomato Septoria leaf spot,74,in_other_folder,filename,"filename Tomato bacterial spot closeup; same photo as TBS#60, kept there"
+plantdoc/train/Tomato Septoria leaf spot/Tomato+Problems+Septoria+Leaf+Spot.jpg,c46ab3f911fc4dccc3ce8646c390f78a,Tomato Septoria leaf spot,75,unusable,visual,presentation slide (Tomato Problems)
+plantdoc/train/Tomato Septoria leaf spot/gray-leaf-spot.jpg,2ad58b62d32e4aac7fee58751a8a52c6,Tomato Septoria leaf spot,91,other_disease,filename,filename gray-leaf-spot (a different disease); same photo as TSP#150
+plantdoc/train/Tomato Septoria leaf spot/septoria+on+rudbeckia.jpg,74926625cfd6973fc585e2c15fe99e82,Tomato Septoria leaf spot,95,wrong_crop,filename,filename septoria on rudbeckia
+plantdoc/train/Tomato Septoria leaf spot/septoria-leaf-spot-in-tomatoes.jpg,c7658d3d693476e5caa8c9521f4f273b,Tomato Septoria leaf spot,98,unusable,visual,graphic with large text overlay
+plantdoc/train/Tomato Septoria leaf spot/septoria-leaf-spot-treatment-leaf-spot-septoria-leaf-spot-soil-treatment-septoria-leaf-spot-tomato-organic-treatment.jpg,127187db55c6c6598e836c6efc9c42b7,Tomato Septoria leaf spot,103,wrong_crop,visual,"soybean leaf, not tomato"
+plantdoc/train/Tomato Septoria leaf spot/slide21-n.jpg,dfb6ae9190cbb722802267f142bcb665,Tomato Septoria leaf spot,118,unusable,caption,"slide; caption names Septoria albopunctata (blueberry), same photo as TSP#27"
+plantdoc/train/Tomato Septoria leaf spot/tomato-diseases-1-638.jpg,52cb9350d804cb47f33dd898a372faea,Tomato Septoria leaf spot,126,unusable,visual,"presentation slide, two panels and text"
+plantdoc/train/Tomato Septoria leaf spot/tomato-early-blight-e1437503226856.jpg,7d22b07171b88ff9e535e6e60a0025df,Tomato Septoria leaf spot,127,other_disease,filename,filename tomato-early-blight
+plantdoc/train/Tomato Septoria leaf spot/tomato_septoria_alternaria_1.jpg,60b34856d753669af6df5245c1a0f6e7,Tomato Septoria leaf spot,144,two_diseases,filename,filename names Septoria and Alternaria
+plantdoc/train/Tomato Septoria leaf spot/vdu-tomato-sept-eb-285x300.jpg,1c778f04f8256a201f79ea6e02211a86,Tomato Septoria leaf spot,147,two_diseases,filename,filename names Septoria and early blight (sept-eb)
+plantdoc/train/Tomato Septoria leaf spot/xgray-leaf-spot.jpg.pagespeed.ic.ltF8KfKtQ1.jpg,96d17c29f2ad43524917fc318057bf48,Tomato Septoria leaf spot,150,other_disease,filename,filename gray-leaf-spot; same photo as TSP#91
+plantdoc/test/Tomato mold leaf/BIGSD.jpg,2b5a31462a6d6894647ce75bf0934f53,Tomato mold leaf,3,unusable,visual,presentation title slide
+plantdoc/test/Tomato mold leaf/black_leaf_mold_in_zina_tina.jpg,c3696abe681df0d51789c5f44442ace5,Tomato mold leaf,4,other_disease,filename,"filename black leaf mold (Pseudocercospora fuligena), a different disease from leaf mold"
+plantdoc/train/Tomato mold leaf/2195890.jpg,4d8c8dbb450544dcf9d16abc6f51aee3,Tomato mold leaf,9,other_disease,visual,"glossy leaves with pale speckling, no diffuse yellow patches or underside mould: not leaf mold"
+plantdoc/train/Tomato mold leaf/5830204360_757cd7fdfc_z.jpg,fcb41691da6adec718ab1f95ab8afd37,Tomato mold leaf,14,other_disease,visual,"V-shaped brown necrosis from the leaflet tips, no velvety mould: not leaf mold"
+plantdoc/train/Tomato mold leaf/603-116-0.jpg,faa5f0b7c519980f2e521f6a6ae1958d,Tomato mold leaf,15,other_disease,visual,"V-shaped brown lesion from the leaf edge with a yellow border, no velvety mould: not leaf mold"
+plantdoc/train/Tomato mold leaf/BlackLeafMold2.jpg,9d7a909766e27c2ab74caa92423e9a87,Tomato mold leaf,22,other_disease,filename,"filename BlackLeafMold (black leaf mold, a different disease)"
+plantdoc/train/Tomato mold leaf/Botrytis-Tomato-Seedlings-2-copy-50QUALITY-17wck0d.jpg,8f5ecfa32d2a7145b6ee70dd4f792389,Tomato mold leaf,23,other_disease,filename,filename Botrytis (grey mould)
+plantdoc/train/Tomato mold leaf/Leaf+Mold+lower+leaf+surface+spores+%28conidia%29.jpg,f24b41f561ad6daa96840ed61281544c,Tomato mold leaf,32,unusable,visual,presentation slide
+plantdoc/train/Tomato mold leaf/Leaf+Mold+upper+leaf+surface.jpg,5d41f6d892742eae952db530590bf5d0,Tomato mold leaf,33,unusable,visual,presentation slide
+plantdoc/train/Tomato mold leaf/Tomato%20greenhouse%20leaf%20edema%20and%20distortion2F.JPG.jpg,a2ce1b31e5cad21e96c296636e35cd40,Tomato mold leaf,43,other_disease,filename,filename leaf edema and distortion
+plantdoc/train/Tomato mold leaf/black%20leaf%20mold%20%283%29.JPG?itok=u5TDHCSM.jpg,0a96e37633acf6b2a42c751873d5be21,Tomato mold leaf,47,other_disease,filename,filename black leaf mold (a different disease)
+plantdoc/train/Tomato mold leaf/black%20leaf%20mold%20%284%29.JPG?itok=DIIUw9JU.jpg,4506935be828f31f1ec9b31c0fa1774a,Tomato mold leaf,48,other_disease,filename,filename black leaf mold (a different disease)
+plantdoc/train/Tomato mold leaf/d-to-tylv-fo005-14496A31BE70553130A.jpg,f4b1a42002e8963b505c15a906285e20,Tomato mold leaf,49,other_disease,filename,filename tylv (yellow leaf curl virus); curled leaves with yellow edges
+plantdoc/train/Tomato mold leaf/gray-leaf-spot-300x225.jpg,8b3e41b1139f14c24ce5cdc566130277,Tomato mold leaf,52,other_disease,filename,filename gray-leaf-spot
+plantdoc/train/Tomato mold leaf/gray-mold-on-tomato-leaf.jpg,7f5f40e761797a0453572b470f5e27dd,Tomato mold leaf,53,other_disease,filename,filename gray-mold
+plantdoc/train/Tomato mold leaf/grey-mould-botrytis-cinerea-on-bottom-of-a-tomato-leaf-late-in-the-AFRDAN.jpg,dfcbeac915d8df0fe5946da644421d68,Tomato mold leaf,54,other_disease,filename,filename grey-mould-botrytis
+plantdoc/train/Tomato mold leaf/leaf_mold_nightshade1x500.jpg,963751e79cbbdac87eab42d9fe942bc0,Tomato mold leaf,60,wrong_crop,filename,filename leaf_mold_nightshade; entire-edged nightshade leaf
+plantdoc/train/Tomato mold leaf/leaf_mold_nightshade2x500.jpg,2f81a1799dbe90f3149b467a946a9b1f,Tomato mold leaf,61,wrong_crop,filename,filename leaf_mold_nightshade
+plantdoc/train/Tomato mold leaf/pm3.jpg,aeaa9f7ae20e19ad4d1e786714ce77bd,Tomato mold leaf,72,other_disease,visual,white powdery patches: powdery mildew (filename pm3)
+plantdoc/train/Tomato mold leaf/tomato-gray-leaf-spot.jpg,79173e9d2fca078a10b2e1a3d2ad91b5,Tomato mold leaf,76,other_disease,filename,filename tomato-gray-leaf-spot
+plantdoc/train/Tomato mold leaf/tomato.jpg,5c3ead26603eaa72358b5abd88018dff,Tomato mold leaf,81,no_symptoms,visual,"whole plant, no leaf mold symptoms visible"
+plantdoc/train/Tomato mold leaf/tomato_Leaf-roll-physiological-7059-SLoewen_thm.jpg,8a115f774d821ec31391000cb4f4e1fe,Tomato mold leaf,82,other_disease,filename,filename physiological leaf roll
+plantdoc/train/Tomato mold leaf/tylc.jpg,5b433cd717b3584bdaf3e6197ae4fecc,Tomato mold leaf,91,unusable,visual,four-panel composite; same photo as TYV#61
+plantdoc/test/Tomato leaf mosaic virus/page_2.jpg,a6e45ccadafab2d5453feccd0512b6cc,Tomato leaf mosaic virus,6,unusable,visual,presentation slide with three panels
+plantdoc/train/Tomato leaf mosaic virus/TNRV2.jpg,7f85952ee0a482f3fd399e0595ad2ccc,Tomato leaf mosaic virus,18,wrong_crop,visual,"simple smooth-edged leaves (pepper-like), not tomato"
+plantdoc/train/Tomato leaf mosaic virus/Tomato-brown-rugose-fruit-virus-ToBRFV-infected-tomato-Solanum-lycopersicum-plants_Q320.jpg,0e2f203d4190fac5ed28ea7e13a1748f,Tomato leaf mosaic virus,21,unusable,filename,multi-panel figure; filename names tomato brown rugose fruit virus
+plantdoc/train/Tomato leaf mosaic virus/ab40cce958c60d8b6e0ec2e4fdb8f526.jpg,58ec2f2b3d753ba6d747b15bb43e1c6d,Tomato leaf mosaic virus,22,in_other_folder,duplicate,"same photo as TYV#39, kept there; cupped leaflets with yellow edges: yellow leaf curl"
+plantdoc/train/Tomato leaf mosaic virus/d41c86a650e49b8066d6b347d8e9d3ad.jpg,9ae583c460385d1f07a8bb91ac6b1a5e,Tomato leaf mosaic virus,23,wrong_crop,visual,"broad smooth-edged leaflets (potato-like), not tomato"
+plantdoc/train/Tomato leaf mosaic virus/dahliaviralsymptoms2lowresjpg.jpg,93fa178f94f8117fb98ee82770948cd6,Tomato leaf mosaic virus,24,wrong_crop,filename,filename dahlia viral symptoms
+plantdoc/train/Tomato leaf mosaic virus/dummen-tmv.jpg,121f45b894c2ddbd69164edcc285b299,Tomato leaf mosaic virus,25,wrong_crop,visual,"ornamental bedding plant (Dummen), not tomato"
+plantdoc/train/Tomato leaf mosaic virus/fig1-2k11-163-165.jpg,2bc257537da26e8ff35f77143410c106,Tomato leaf mosaic virus,26,wrong_crop,visual,"pelargonium-like rounded leaves, not tomato"
+plantdoc/train/Tomato leaf mosaic virus/fig2-2k11-1-12.jpg,209ec874f9d917484fe78a33b9e30a19,Tomato leaf mosaic virus,27,wrong_crop,visual,"cucurbit leaf, not tomato"
+plantdoc/train/Tomato leaf mosaic virus/mosiac-virus3.jpg,2783485c6c31abcd9799f3ab074a5dca,Tomato leaf mosaic virus,34,wrong_crop,visual,"tobacco plant, not tomato"
+plantdoc/train/Tomato leaf mosaic virus/tomato-leaf-herbicide-damage.jpg,bef550722985917bf78576adedd1e851,Tomato leaf mosaic virus,39,other_disease,filename,filename tomato-leaf-herbicide-damage
+plantdoc/train/Tomato leaf mosaic virus/tomato-leaves-260nw-670831669.jpg,abfb1ca8d2aa543f063b34b1d9d24cfb,Tomato leaf mosaic virus,40,no_symptoms,visual,tomato leaves with no mottling or distortion visible
+plantdoc/train/Tomato leaf mosaic virus/tomato_leaf_curl_ND_on_luffah_KC3701030-3.jpg,dd6deef4d28dd6b6ee32b62359fb27b3,Tomato leaf mosaic virus,49,wrong_crop,filename,filename leaf curl on luffa
+plantdoc/test/Tomato leaf yellow virus/17fc47.jpg,0c79b0563d44ad16229d8e68acd5658e,Tomato leaf yellow virus,2,other_disease,visual,yellowing of older leaves without upward cupping or curling: not yellow leaf curl
+plantdoc/test/Tomato leaf yellow virus/glyphosate.jpg,77de70e8fc49af0a19892ca9407fe094,Tomato leaf yellow virus,5,other_disease,filename,filename glyphosate (herbicide injury); three-panel composite
+plantdoc/test/Tomato leaf yellow virus/tylcv-seminar-1-638.jpg,5b4163adb2bd89b453328e8063b16f37,Tomato leaf yellow virus,6,unusable,visual,presentation title slide
+plantdoc/train/Tomato leaf yellow virus/tylcv-seminar-1-638.jpg,5b4163adb2bd89b453328e8063b16f37,Tomato leaf yellow virus,6,unusable,visual,presentation title slide
+plantdoc/train/Tomato leaf yellow virus/072.jpg,e367de7c0998d08f296f038e2d05dff7,Tomato leaf yellow virus,7,other_disease,visual,yellowing of older leaves without upward cupping or curling: not yellow leaf curl
+plantdoc/train/Tomato leaf yellow virus/IU-TYLCV_img_6.jpg,7e6c671ba9223ed0c8487be69c194bb3,Tomato leaf yellow virus,30,unusable,visual,four-panel composite
+plantdoc/train/Tomato leaf yellow virus/leaves-on-tomato-plant-turning-yellow-what-does-it-mean-when-your-plant-leaves-turn-yellow-tomato-leaf-problems-a-guide-to-leaves-tomato-plant-turning-yellow.jpg,0ffab1ba1056b4c3765095b5382095b8,Tomato leaf yellow virus,46,unusable,visual,two-panel composite; general yellowing article image
+plantdoc/train/Tomato leaf yellow virus/psyllid-yellows.jpg,e4494fcd088a8f56b98fc696e66f6b8a,Tomato leaf yellow virus,47,other_disease,filename,filename psyllid-yellows (a different disorder)
+plantdoc/train/Tomato leaf yellow virus/role-of-whitefly-in-plant-virus-transmission-by-pmanikandan-13-638.jpg,81d5be82361bfd1fe77a1800566116ac,Tomato leaf yellow virus,49,unusable,visual,presentation slide
+plantdoc/train/Tomato leaf yellow virus/role-of-whitefly-in-plant-virus-transmission-by-pmanikandan-25-638.jpg,3bee34f4fa717691c74b6936cd145253,Tomato leaf yellow virus,50,unusable,visual,presentation slide
+plantdoc/train/Tomato leaf yellow virus/tomato-yellow-closeup-2.jpg,c4992eb508dbcaaae6991b966252d718,Tomato leaf yellow virus,56,other_disease,visual,yellowing of older leaves without upward cupping or curling: not yellow leaf curl
+plantdoc/train/Tomato leaf yellow virus/tomato-yellow-closeup-3.jpg,67e8fb5e7c56474ba2195988068fb4c5,Tomato leaf yellow virus,57,other_disease,visual,yellowing of older leaves without upward cupping or curling: not yellow leaf curl
+plantdoc/train/Tomato leaf yellow virus/tomato-yellow-closeup-4.jpg,a95d811dc784f6205a77065214a518c7,Tomato leaf yellow virus,58,other_disease,visual,yellowing of older leaves without upward cupping or curling: not yellow leaf curl
+plantdoc/train/Tomato leaf yellow virus/tomato-yellow-leaf-curl-disease.jpg,d682024d5b50a2973e517441f897c720,Tomato leaf yellow virus,61,unusable,visual,four-panel composite; same photo as TLM#91
+plantdoc/train/Tomato leaf yellow virus/tomato-yellow-leaf-curl-virus-pdf-78kb.jpg,2bcfc7be2e9b01276b9919a1d10af3d7,Tomato leaf yellow virus,62,unusable,visual,fact-sheet page
+plantdoc/train/Tomato leaf yellow virus/tomato_leaf_roll.JPG.jpg,b1fc6dfa7c88bda744d09089ace9a074,Tomato leaf yellow virus,68,other_disease,filename,filename physiological leaf roll; two-panel composite
+plantdoc/test/Tomato leaf/2013-08-20-06.jpg,9089db404a4bc69f03bd695b7d78e980,Tomato leaf,2,unusable,visual,chopped leaves on a cutting board (food photo)
+plantdoc/test/Tomato leaf/DSCN1015.JPG.jpg,2ddd7bd009591273e9f3b1815812445c,Tomato leaf,4,wrong_crop,visual,pepper plant
+plantdoc/train/Tomato leaf/003.JPG.jpg,c43ee7aec83bf4b8e057029dfedfc22b,Tomato leaf,9,other_disease,visual,pale patches on the leaflets: not clearly healthy
+plantdoc/train/Tomato leaf/1686.jpg,08ee184134eedab6ca96957a5c2549c7,Tomato leaf,13,other_disease,caption,caption names tomato yellow leaf curl virus (EPPO)
+plantdoc/train/Tomato leaf/1688.jpg,1f3e9eb3db76e9d8f1edbadf3948f867,Tomato leaf,14,other_disease,caption,caption names tomato yellow leaf curl virus (EPPO); curled yellow-edged tops
+plantdoc/train/Tomato leaf/20130609_151253_zpsc7d93f62.jpg,a3812c3b450d5df53d52190f2857efea,Tomato leaf,18,other_disease,visual,"yellowed, wilting lower leaves: not healthy"
+plantdoc/train/Tomato leaf/20160428_080421.jpg,dd2a681c07dbc55ef982de1a46e2f809,Tomato leaf,21,wrong_crop,visual,pepper seedling
+plantdoc/train/Tomato leaf/9bfac1dea7f401e3b379dab33f535bb4.jpg,a8fbee1ee6efda130608a9b8c6e30df8,Tomato leaf,22,unusable,visual,grid of scanned leaf silhouettes
+plantdoc/train/Tomato leaf/Bacterial-leaf-spot-transplants1.jpg,6669978c64e2f9271537299fe4c000f0,Tomato leaf,23,other_disease,filename,filename Bacterial-leaf-spot-transplants; dark spots visible
+plantdoc/train/Tomato leaf/Basil%2Binfected%2Bby%2BTomato%2BSpotted%2BWilt%2BVirus.jpg,59c8df696985731c6a857e7065f33bcf,Tomato leaf,24,wrong_crop,filename,filename basil infected by tomato spotted wilt virus
+plantdoc/train/Tomato leaf/DSCN1016.JPG.jpg,9f531b91c7d732774788ef4f1a62f177,Tomato leaf,26,wrong_crop,visual,pepper plant
+plantdoc/train/Tomato leaf/Fig-2.jpg,03fb4836a4dd9661fe7090bb23b70905,Tomato leaf,27,wrong_crop,visual,bean leaves with mosaic
+plantdoc/train/Tomato leaf/L.peruv-assort.jpg,483ac10d41cc43f0b2e7326b5f6c2c55,Tomato leaf,31,unusable,visual,scan of many wild-tomato leaves (L. peruvianum assortment)
+plantdoc/train/Tomato leaf/curling-issues.jpg,26680066f28674f7776850e01b87f32e,Tomato leaf,35,other_disease,visual,"curled, distorted leaflets: not clearly healthy"
+plantdoc/train/Tomato leaf/happier-inside.jpg,e5d2068677c77e199840ba98d1e5eba7,Tomato leaf,41,wrong_crop,visual,pepper plant
+plantdoc/train/Tomato leaf/late_blight_tomato_leaf4x1200.jpg,730b3a62ffbe187709ff5bafad4b1045,Tomato leaf,44,other_disease,filename,filename late_blight_tomato_leaf
+plantdoc/train/Tomato leaf/mortgage-lifter-yellow-leaves-2.jpg,9d637807a85352005cde8b03f13e4a6b,Tomato leaf,45,other_disease,visual,yellowing leaf on the plant (filename mortgage-lifter-yellow-leaves): not clearly healthy
+plantdoc/train/Tomato leaf/stock-vector-set-of-vector-elements-for-your-design-red-ripe-tomatoes-with-water-drops-tomato-leaves-and-tomato-203297116.jpg,7099713fddb713dea084f013c271143e,Tomato leaf,52,unusable,visual,stock vector illustration

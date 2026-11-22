@@ -56,7 +56,7 @@ The unconflicted count is the most conservative estimate of what each class can 
 - **Healthy leaves.** PlantDoc names a healthy leaf by its crop alone, so "Tomato leaf" pairs with `Tomato___healthy`. PlantDoc has no "Potato leaf" class, so `Potato___healthy` has no pair.
 - **"Tomato leaf yellow virus"** is paired with Tomato Yellow Leaf Curl Virus. It is the only yellowing virus among PlantVillage's tomato classes, and one of its files is named `tylcv-seminar-1-638.jpg` (TYLCV).
 - **The potato blight counts drop by 5 each** once conflicted photos are removed. These are the five photos filed as both early and late blight. They are the first thing the Day 04 label check has to resolve.
-- **After the label check (18 October 2026), potato keeps 64 early blight and 89 late blight photos.** The check found 8 photos filed under both labels, not 5, and resolved each one. It also excluded tomato leaves, photos showing the other blight, and unusable images. See [label-check.md](label-check.md). Tomato classes have not been checked yet, so their counts above are still pre-check.
+- **After the label check (18 October 2026, revised 22 November), potato keeps 62 early blight and 88 late blight photos.** The check found 8 photos filed under both labels, not 5, and resolved each one. It also excluded tomato leaves, photos showing the other blight, and unusable images. See [label-check.md](label-check.md). All 8 tomato classes were checked on 22 November 2026; their post-check counts are in the class set table below.
 
 ## Inclusion rule
 
@@ -76,18 +76,24 @@ The unconflicted count is the most conservative estimate of what each class can 
 
 | # | Class (PlantVillage folder name) | PlantDoc class | PD unconflicted | After label check |
 |---|---|---|---|---|
-| 1 | Tomato___Bacterial_spot | Tomato leaf bacterial spot | 109 | pending |
-| 2 | Tomato___Early_blight | Tomato Early blight leaf | 88 | pending |
-| 3 | Tomato___Late_blight | Tomato leaf late blight | 111 | pending |
-| 4 | Tomato___Leaf_Mold | Tomato mold leaf | 91 | pending |
-| 5 | Tomato___Septoria_leaf_spot | Tomato Septoria leaf spot | 149 | pending |
-| 6 | Tomato___Tomato_Yellow_Leaf_Curl_Virus | Tomato leaf yellow virus | 75 | pending |
-| 7 | Tomato___Tomato_mosaic_virus | Tomato leaf mosaic virus | 54 | pending |
-| 8 | Tomato___healthy | Tomato leaf | 63 | pending |
-| 9 | Potato___Early_blight | Potato leaf early blight | 111 | 64 |
-| 10 | Potato___Late_blight | Potato leaf late blight | 100 | 89 |
+| 1 | Tomato___Bacterial_spot | Tomato leaf bacterial spot | 109 | 57 |
+| 2 | Tomato___Early_blight | Tomato Early blight leaf | 88 | 73 |
+| 3 | Tomato___Late_blight | Tomato leaf late blight | 111 | 103 |
+| 4 | Tomato___Leaf_Mold | Tomato mold leaf | 91 | 68 |
+| 5 | Tomato___Septoria_leaf_spot | Tomato Septoria leaf spot | 149 | 126 |
+| 6 | Tomato___Tomato_Yellow_Leaf_Curl_Virus | Tomato leaf yellow virus | 75 | 60 |
+| 7 | Tomato___Tomato_mosaic_virus | Tomato leaf mosaic virus | 54 | 41 |
+| 8 | Tomato___healthy | Tomato leaf | 63 | 45 |
+| 9 | Potato___Early_blight | Potato leaf early blight | 111 | 62 |
+| 10 | Potato___Late_blight | Potato leaf late blight | 100 | 88 |
 
-"After label check" is the count left once [label-exclusions.csv](label-exclusions.csv) is applied, and it replaces the unconflicted count for the inclusion rule. The potato early blight count drops furthest. It is still above 50, so the class set stands.
+"After label check" is the count left once [label-exclusions.csv](label-exclusions.csv) is applied: 723 photos across the 10 classes, from 963.
+
+**Two classes fall below 50 after the check, and both are kept.** Mosaic virus has 41 and healthy tomato has 45. The inclusion rule is applied to the unconflicted counts it was defined on, and those fixed the class set on 8 October. The label check cleans the field data but does not reopen the class set. This changes what an earlier version of this document said: on 18 October it stated that the post-check count would replace the unconflicted count for the rule.
+
+- **Why keep them.** Healthy tomato is the only healthy class, and so the only test of healthy against diseased. The exclusion of healthy potato above relies on it. Dropping it would leave a classifier that can only ever say a leaf is diseased.
+- **Why not lower the threshold instead.** A new threshold picked now, after seeing the counts, would be tuned to the result. Mosaic virus sits at 41, so a threshold of 40 would look chosen to keep it.
+- **What it costs.** After a fine-tuning slice of about 10 photos, these two classes have only about 30 field test photos each. A single error moves their per-class field accuracy by about 3 points. The report gives their per-class results with that caveat, and the headline gap uses macro-averaged scores over all 10 classes.
 
 The PlantVillage folder name is used as each class's identifier throughout the code. PlantDoc folders are translated to it through `PAIRS`.
 

@@ -1,0 +1,23 @@
+path_a,path_b,found_by,label_check_ref,relation
+plantdoc/train/Potato leaf late blight/LB_potato_leaf_topside.jpg,plantdoc/train/Potato leaf late blight/PotatoLateBlight2.jpg,hash,LB#33 = LB#53,same_photo
+plantdoc/train/Tomato Early blight leaf/3606630.jpg,plantdoc/train/Tomato Early blight leaf/early-blight-pp-labeled_orig.jpg,hash,TEB#19 = TEB#62,same_photo
+plantdoc/train/Tomato Early blight leaf/EBTomato.jpg,plantdoc/train/Tomato Early blight leaf/tomatoblight.jpg,hash,TEB#25 = TEB#86,same_photo
+plantdoc/train/Tomato Early blight leaf/Early-bligh_t.jpg,plantdoc/train/Tomato Early blight leaf/Early-blight.jpg,hash,TEB#27 = TEB#29,same_photo
+plantdoc/train/Tomato Early blight leaf/confused-bacterial-canker-early-blight-zoom.JPG.jpg,plantdoc/train/Tomato Early blight leaf/tomato_D2b-Early-blight---RPitblado_zoom.jpg,hash,TEB#49 = TEB#81,same_photo
+plantdoc/test/Tomato leaf late blight/18c.jpg,plantdoc/train/Tomato leaf late blight/late_blight1.jpg,hash,TLB#2 = TLB#65,same_photo
+plantdoc/train/Tomato leaf late blight/20150619d.jpg,plantdoc/train/Tomato leaf late blight/IMG_5360.jpg,hash,TLB#12 = TLB#25,same_photo
+plantdoc/train/Tomato leaf late blight/924977LateBlightLeaf.jpg,plantdoc/train/Tomato leaf late blight/LateBlightLeaf.jpg,hash,TLB#17 = TLB#39,same_photo
+plantdoc/train/Tomato leaf late blight/TomatoLateBlight-3-Underside-2ebj05b-300x225.jpg,plantdoc/train/Tomato leaf late blight/symptoms_of_late_blight.jpg2__0.jpg,hash,TLB#51 = TLB#91,same_photo
+plantdoc/train/Tomato leaf late blight/late_blight_tomato_leaf5x12001-650x305.jpg,plantdoc/train/Tomato leaf late blight/late_blight_tomato_leaf5x12001.jpg,eye,TLB#72 = TLB#73,crop_or_zoom
+plantdoc/train/Tomato leaf bacterial spot/BCH%20medium%20thumbnail%20for%20upload%20%2814%29.jpg,plantdoc/train/Tomato leaf bacterial spot/BCH%20small%20thumbnail%20for%20upload%20%2814%29.jpg,hash,TBS#27 = TBS#28,same_photo
+plantdoc/train/Tomato leaf bacterial spot/TomatoBacterialSpot2.jpg,plantdoc/train/Tomato leaf bacterial spot/bact-spot-leaf-big.jpg,hash,TBS#67 = TBS#76,crop_or_zoom
+plantdoc/train/Tomato Septoria leaf spot/5c77186a4ea326e5495c9d03cd89ce16.jpg,plantdoc/train/Tomato Septoria leaf spot/eb56b488e349c2de423ab6afbcc4bd5b.jpg,hash,TSP#38 = TSP#90,same_photo
+plantdoc/train/Tomato Septoria leaf spot/Septoria-Tomato.jpg,plantdoc/train/Tomato Septoria leaf spot/tomatofactsheet.png.png,hash,TSP#61 = TSP#145,same_photo
+plantdoc/train/Tomato Septoria leaf spot/tomato-septoria-3-500x384.jpg,plantdoc/train/Tomato Septoria leaf spot/tomato-septoria-3.jpg,hash,TSP#132 = TSP#133,same_photo
+plantdoc/train/Tomato Septoria leaf spot/tomato-septoria-5-500x384.jpg,plantdoc/train/Tomato Septoria leaf spot/tomato-septoria-5.jpg,hash,TSP#134 = TSP#135,same_photo
+plantdoc/train/Tomato leaf yellow virus/TYLCVDFerrinlr.jpg,plantdoc/train/Tomato leaf yellow virus/tomato-plant-virus-tomato-yellow-leaf-curl-virus-tomato-plant-disease-mosaic-virus.jpg,hash,TYV#38 = TYV#55,same_photo
+plantdoc/train/Tomato Septoria leaf spot/5315825271570432-600x272.jpeg.jpg,plantdoc/train/Tomato Septoria leaf spot/5315825271570432.jpeg.jpg,filename,TSP#28 = TSP#29,crop_or_zoom
+plantdoc/train/Tomato Septoria leaf spot/5516100468998144-600x272.jpeg.jpg,plantdoc/train/Tomato Septoria leaf spot/5516100468998144.jpeg.jpg,filename,TSP#32 = TSP#33,crop_or_zoom
+plantdoc/train/Tomato Septoria leaf spot/5775225744523264-600x272.jpeg.jpg,plantdoc/train/Tomato Septoria leaf spot/5775225744523264.jpeg.jpg,filename,TSP#35 = TSP#36,crop_or_zoom
+plantdoc/train/Tomato Septoria leaf spot/6078710516023296-600x272.jpeg.jpg,plantdoc/train/Tomato Septoria leaf spot/6078710516023296.jpeg.jpg,filename,TSP#40 = TSP#41,crop_or_zoom
+plantdoc/test/Tomato Septoria leaf spot/6134794031202304.jpeg.jpg,plantdoc/train/Tomato Septoria leaf spot/6134794031202304-600x272.jpeg.jpg,filename,TSP#5 = TSP#42,crop_or_zoom

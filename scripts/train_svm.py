@@ -3,7 +3,7 @@
     python scripts/train_svm.py             # train, score, write results/baseline_a.json
     python scripts/train_svm.py --seed 1    # another seed (the SVM's solver shuffles data)
 
-Steps (design in the decision log, 24 Nov 2026):
+Steps:
     1. 512-bin HSV histogram per image, padding excluded (leafshift.features)
     2. square root of each bin (the Hellinger transform); no standardisation
     3. for each C in C_GRID: train on train, score macro F1 on val
@@ -24,7 +24,6 @@ all models together later
 from __future__ import annotations
 
 import argparse
-import json
 import sys
 import time
 import warnings
@@ -36,18 +35,18 @@ sys.path.insert(0, str(REPO_ROOT))  # find leafshift when run as a script
 import numpy as np  # noqa: E402
 import sklearn  # noqa: E402
 from sklearn.exceptions import ConvergenceWarning  # noqa: E402
-from sklearn.metrics import accuracy_score, confusion_matrix, f1_score, recall_score  # noqa: E402
+from sklearn.metrics import f1_score  # noqa: E402
 from sklearn.pipeline import make_pipeline  # noqa: E402
 from sklearn.preprocessing import FunctionTransformer  # noqa: E402
 from sklearn.svm import LinearSVC  # noqa: E402
 
 from leafshift.data import load_cache_meta  # noqa: E402
+from leafshift.evaluate import EVAL_SPLITS, evaluate, print_report, save_results  # noqa: E402
 from leafshift.features import BINS, split_features  # noqa: E402
 
 RESULTS = REPO_ROOT / "results" / "baseline_a.json"
 C_GRID = [0.01, 0.1, 1.0, 10.0, 100.0]
 MAX_ITER = 20_000
-EVAL_SPLITS = ("test", "field_test")
 
 
 def make_model(c: float, seed: int):
@@ -60,26 +59,6 @@ def fit(model, X, y) -> bool:
         warnings.simplefilter("always", ConvergenceWarning)
         model.fit(X, y)
     return not any(issubclass(w.category, ConvergenceWarning) for w in caught)
-
-
-def scores(y_true: np.ndarray, y_pred: np.ndarray, classes: list[str]) -> dict:
-    labels = list(range(len(classes)))
-    per_class = recall_score(y_true, y_pred, labels=labels, average=None, zero_division=0)
-    return {
-        "n": int(len(y_true)),
-        "accuracy": float(accuracy_score(y_true, y_pred)),
-        "macro_f1": float(f1_score(y_true, y_pred, labels=labels, average="macro", zero_division=0)),
-        "per_class_accuracy": {c: float(a) for c, a in zip(classes, per_class)},
-        "confusion_matrix": confusion_matrix(y_true, y_pred, labels=labels).tolist(),
-    }
-
-
-def print_confusion(name: str, matrix: list[list[int]], classes: list[str]) -> None:
-    short = [c.split("___")[0][0] + ":" + c.split("___")[1][:10] for c in classes]
-    print(f"\nconfusion matrix, {name} (rows = true class, columns = predicted)")
-    print(" " * 14 + " ".join(f"{i:>5d}" for i in range(len(classes))))
-    for i, row in enumerate(matrix):
-        print(f"{i} {short[i]:<12s}" + " ".join(f"{v:>5d}" for v in row))
 
 
 def main() -> None:
@@ -109,18 +88,11 @@ def main() -> None:
     best_c, _, model, converged = best
     print(f"chosen C = {best_c:g}")
 
-    results = {}
-    for split in EVAL_SPLITS:
-        X, y = data[split]
-        results[split] = scores(y, model.predict(X), classes)
+    y_true = {s: data[s][1] for s in EVAL_SPLITS}
+    y_pred = {s: model.predict(data[s][0]) for s in EVAL_SPLITS}
+    evaluation = evaluate(y_true, y_pred, classes, y_train)
 
-    # Floors: what guessing would score, so the SVM's numbers have something to beat.
-    majority = int(np.bincount(y_train).argmax())
-    floors = {"chance_accuracy": 1 / len(classes), "majority_class": classes[majority],
-              **{f"majority_accuracy_{s}": float((data[s][1] == majority).mean()) for s in EVAL_SPLITS}}
-
-    gap = {m: results["test"][m] - results["field_test"][m] for m in ("accuracy", "macro_f1")}
-    output = {
+    save_results(RESULTS, {
         "model": "Baseline A: colour histogram + linear SVM",
         "features": f"joint HSV histogram, {BINS}x{BINS}x{BINS} = {BINS ** 3} bins, padding excluded, square-rooted (Hellinger)",
         "seed": args.seed,
@@ -128,28 +100,11 @@ def main() -> None:
         "tuning": tuning,
         "chosen_C": best_c,
         "converged": converged,
-        "results": results,
-        "gap_in_domain_minus_field": gap,
-        "floors": floors,
+        **evaluation,
         "versions": {"scikit-learn": sklearn.__version__, "numpy": np.__version__},
         "splits_csv_sha256": load_cache_meta()["splits_csv_sha256"],
-    }
-    RESULTS.parent.mkdir(parents=True, exist_ok=True)
-    RESULTS.write_text(json.dumps(output, indent=2) + "\n")
-
-    print(f"\n{'':22s}{'accuracy':>10s}{'macro F1':>10s}")
-    for split in EVAL_SPLITS:
-        print(f"{split:22s}{results[split]['accuracy']:>10.4f}{results[split]['macro_f1']:>10.4f}")
-    print(f"{'gap (lab - field)':22s}{gap['accuracy']:>10.4f}{gap['macro_f1']:>10.4f}")
-    print(f"\nfloors: chance {floors['chance_accuracy']:.2f}; always '{floors['majority_class']}' "
-          + ", ".join(f"{s} {floors[f'majority_accuracy_{s}']:.4f}" for s in EVAL_SPLITS))
-
-    print("\nper-class accuracy")
-    for c in classes:
-        print(f"  {c:40s} test {results['test']['per_class_accuracy'][c]:.3f}   "
-              f"field {results['field_test']['per_class_accuracy'][c]:.3f}")
-    for split in EVAL_SPLITS:
-        print_confusion(split, results[split]["confusion_matrix"], classes)
+    })
+    print_report(evaluation, classes)
     print(f"\nwrote {RESULTS.relative_to(REPO_ROOT)}")
 
 

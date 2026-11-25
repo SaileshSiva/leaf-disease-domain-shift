@@ -1,8 +1,10 @@
-"""Draw the report figures for one results file.
+"""Draw the report figures for one run.
 
-    python scripts/plot_results.py results/baseline_a.json
+    python scripts/plot_results.py results/runs/baseline_a_seed0_<timestamp>
 
-Writes results/figures/<name>_confusion.png and <name>_per_class.png.
+Reads the run's metrics.json and writes results/figures/<name>_confusion.png
+and <name>_per_class.png, where <name> is the config name. A later run of the
+same config replaces the figures, so plot the run the report quotes.
 """
 from __future__ import annotations
 
@@ -100,17 +102,18 @@ def per_class_figure(results: dict, classes: list[str], title: str, out: Path) -
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
-    parser.add_argument("results", type=Path)
+    parser.add_argument("run_dir", type=Path)
     args = parser.parse_args()
 
-    data = json.loads(args.results.read_text())
+    data = json.loads((args.run_dir / "metrics.json").read_text())
+    name = json.loads((args.run_dir / "run.json").read_text())["name"]
     results = data["results"]
     classes = list(results["test"]["per_class_accuracy"])
     title = data["model"].split(":")[0]
     FIGURES.mkdir(parents=True, exist_ok=True)
 
     for kind, draw in (("confusion", confusion_figure), ("per_class", per_class_figure)):
-        out = FIGURES / f"{args.results.stem}_{kind}.png"
+        out = FIGURES / f"{name}_{kind}.png"
         draw(results, classes, title, out)
         print(f"wrote {out.relative_to(REPO_ROOT)}")
 

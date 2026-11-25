@@ -23,20 +23,14 @@ import argparse
 import json
 import sys
 import time
-from pathlib import Path
 
-# Run as `python scripts/check_loader.py`, Python only searches scripts/, so add
-# the repo root to find the leafshift package (a pyproject is due on Day 11).
-REPO_ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(REPO_ROOT))
+import numpy as np
+import pandas as pd
+import torch
+from PIL import Image, ImageDraw
+from torchvision.utils import make_grid
 
-import numpy as np  # noqa: E402
-import pandas as pd  # noqa: E402
-import torch  # noqa: E402
-from PIL import Image, ImageDraw  # noqa: E402
-from torchvision.utils import make_grid  # noqa: E402
-
-from leafshift.data import CACHE_DIR, SPLITS, CachedSplit, denormalize, make_loader  # noqa: E402
+from leafshift.data import CACHE_DIR, REPO_ROOT, SPLITS, CachedSplit, denormalize, make_loader
 
 SPLITS_JSON = REPO_ROOT / "data" / "splits" / "splits.json"
 SHEETS_DIR = CACHE_DIR / "sheets"

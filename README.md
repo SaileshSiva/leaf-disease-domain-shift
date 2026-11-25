@@ -30,6 +30,7 @@ Neither dataset is committed to this repository.
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
+pip install -e .   # makes the leafshift package importable from scripts and notebooks
 ```
 
 ## Results

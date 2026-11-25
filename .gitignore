@@ -12,6 +12,7 @@ __pycache__/
 .venv/
 venv/
 .ipynb_checkpoints/
+*.egg-info/
 
 # AI assistant working notes (not a project artefact)
 CLAUDE.md

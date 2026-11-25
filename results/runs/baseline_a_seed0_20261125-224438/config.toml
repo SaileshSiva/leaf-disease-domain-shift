@@ -1,0 +1,9 @@
+# Baseline A: joint HSV colour histogram (leafshift.features) + linear SVM.
+# Design and reasons in the decision log, 24 Nov 2026.
+
+seed = 0
+
+[model]
+type = "svm"
+C_grid = [0.01, 0.1, 1.0, 10.0, 100.0]  # each scored by macro F1 on val; ties keep the smaller C
+max_iter = 20_000

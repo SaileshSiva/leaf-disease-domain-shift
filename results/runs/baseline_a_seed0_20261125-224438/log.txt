@@ -1,0 +1,97 @@
+run folder: results/runs/baseline_a_seed0_20261125-224438
+features extracted in 31 s: train 11944, val 2561, test 2561, field_test 601
+
+tuning C on val (macro F1)
+/Users/saileshsivakumaran/Personal/MDS&AI 2026/Capstone Project/leaf-disease-domain-shift/.venv/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/saileshsivakumaran/Personal/MDS&AI 2026/Capstone Project/leaf-disease-domain-shift/.venv/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/saileshsivakumaran/Personal/MDS&AI 2026/Capstone Project/leaf-disease-domain-shift/.venv/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+  C=0.01    val macro F1 0.7567
+/Users/saileshsivakumaran/Personal/MDS&AI 2026/Capstone Project/leaf-disease-domain-shift/.venv/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/saileshsivakumaran/Personal/MDS&AI 2026/Capstone Project/leaf-disease-domain-shift/.venv/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/saileshsivakumaran/Personal/MDS&AI 2026/Capstone Project/leaf-disease-domain-shift/.venv/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+  C=0.1     val macro F1 0.9097
+/Users/saileshsivakumaran/Personal/MDS&AI 2026/Capstone Project/leaf-disease-domain-shift/.venv/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/saileshsivakumaran/Personal/MDS&AI 2026/Capstone Project/leaf-disease-domain-shift/.venv/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/saileshsivakumaran/Personal/MDS&AI 2026/Capstone Project/leaf-disease-domain-shift/.venv/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+  C=1       val macro F1 0.9443
+/Users/saileshsivakumaran/Personal/MDS&AI 2026/Capstone Project/leaf-disease-domain-shift/.venv/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/saileshsivakumaran/Personal/MDS&AI 2026/Capstone Project/leaf-disease-domain-shift/.venv/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/saileshsivakumaran/Personal/MDS&AI 2026/Capstone Project/leaf-disease-domain-shift/.venv/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+  C=10      val macro F1 0.9563
+/Users/saileshsivakumaran/Personal/MDS&AI 2026/Capstone Project/leaf-disease-domain-shift/.venv/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/saileshsivakumaran/Personal/MDS&AI 2026/Capstone Project/leaf-disease-domain-shift/.venv/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/saileshsivakumaran/Personal/MDS&AI 2026/Capstone Project/leaf-disease-domain-shift/.venv/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+  C=100     val macro F1 0.9528
+chosen C = 10
+/Users/saileshsivakumaran/Personal/MDS&AI 2026/Capstone Project/leaf-disease-domain-shift/.venv/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/saileshsivakumaran/Personal/MDS&AI 2026/Capstone Project/leaf-disease-domain-shift/.venv/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/saileshsivakumaran/Personal/MDS&AI 2026/Capstone Project/leaf-disease-domain-shift/.venv/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/saileshsivakumaran/Personal/MDS&AI 2026/Capstone Project/leaf-disease-domain-shift/.venv/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/saileshsivakumaran/Personal/MDS&AI 2026/Capstone Project/leaf-disease-domain-shift/.venv/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/saileshsivakumaran/Personal/MDS&AI 2026/Capstone Project/leaf-disease-domain-shift/.venv/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+
+                        accuracy  macro F1
+test                      0.9606    0.9530
+field_test                0.1597    0.1023
+gap (lab - field)         0.8008    0.8506
+
+floors: chance 0.10; always 'Tomato___Tomato_Yellow_Leaf_Curl_Virus' test 0.3139, field_test 0.0815
+
+per-class accuracy
+  Potato___Early_blight                    lab 0.973   field 0.115
+  Potato___Late_blight                     lab 0.893   field 0.013
+  Tomato___Bacterial_spot                  lab 0.940   field 0.022
+  Tomato___Early_blight                    lab 0.893   field 0.220
+  Tomato___Late_blight                     lab 0.919   field 0.364
+  Tomato___Leaf_Mold                       lab 0.986   field 0.000
+  Tomato___Septoria_leaf_spot              lab 0.966   field 0.224
+  Tomato___Tomato_Yellow_Leaf_Curl_Virus   lab 0.991   field 0.388
+  Tomato___Tomato_mosaic_virus             lab 0.964   field 0.000
+  Tomato___healthy                         lab 0.987   field 0.000
+
+confusion matrix, test (rows = true class, columns = predicted)
+                  0     1     2     3     4     5     6     7     8     9
+0 P:Early_blig  146     1     1     0     1     0     1     0     0     0
+1 P:Late_bligh    2   134     0     6     5     1     1     1     0     0
+2 T:Bacterial_    0     2   300     1     5     2     0     9     0     0
+3 T:Early_blig    0     3     1   134     9     0     0     2     1     0
+4 T:Late_bligh    2     5     5     6   262     0     2     3     0     0
+5 T:Leaf_Mold     0     0     0     1     0   141     0     1     0     0
+6 T:Septoria_l    1     3     0     3     1     0   257     1     0     0
+7 T:Tomato_Yel    0     0     4     0     1     1     1   797     0     0
+8 T:Tomato_mos    0     0     0     0     0     0     1     0    54     1
+9 T:healthy       0     0     0     0     2     0     0     1     0   235
+
+confusion matrix, field_test (rows = true class, columns = predicted)
+                  0     1     2     3     4     5     6     7     8     9
+0 P:Early_blig    6     3     5     5    16     0     8     9     0     0
+1 P:Late_bligh    9     1     1     5    30     1    15    14     1     0
+2 T:Bacterial_    6     3     1     6    13     0     3    13     0     0
+3 T:Early_blig    8     1     4    13    17     0     4    10     2     0
+4 T:Late_bligh    5     2     2    11    32     1     8    27     0     0
+5 T:Leaf_Mold     8     0     3     6    19     0     9    11     0     2
+6 T:Septoria_l    6     0     6    25    28     1    24    17     0     0
+7 T:Tomato_Yel    6     0     1     7     8     0     8    19     0     0
+8 T:Tomato_mos    1     1     0     6    13     0     2     8     0     0
+9 T:healthy       1     0     0     1    20     0     4     9     0     0

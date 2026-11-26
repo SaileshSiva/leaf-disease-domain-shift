@@ -1,0 +1,79 @@
+run folder: results/runs/effnet_b0_frozen_seed1_20261127-001137
+EfficientNet-B0, ImageNet weights, frozen backbone
+device mps, 4,020,358 parameters (12,810 trained), train 11944, val 2561
+
+epoch  train loss  val macro F1  seconds
+    1      0.6738        0.9039       48  *
+    2      0.2750        0.9329       48  *
+    3      0.1972        0.9468       48  *
+    4      0.1604        0.9533       48  *
+    5      0.1367        0.9557       48  *
+    6      0.1176        0.9631       48  *
+    7      0.1079        0.9626       48
+    8      0.0980        0.9607       48
+    9      0.0886        0.9667       48  *
+   10      0.0830        0.9697       48  *
+   11      0.0768        0.9723       48  *
+   12      0.0716        0.9714       48
+   13      0.0688        0.9719       48
+   14      0.0675        0.9762       48  *
+   15      0.0605        0.9749       48
+   16      0.0598        0.9723       48
+   17      0.0587        0.9747       48
+   18      0.0523        0.9751       48
+   19      0.0519        0.9769       48  *
+   20      0.0497        0.9765       48
+   21      0.0470        0.9782       48  *
+   22      0.0455        0.9813       48  *
+   23      0.0448        0.9771       48
+   24      0.0431        0.9760       48
+   25      0.0413        0.9780       48
+   26      0.0397        0.9766       48
+   27      0.0392        0.9769       48
+no improvement for 5 epochs; stopping
+best epoch 22, val macro F1 0.9813
+
+                        accuracy  macro F1
+test                      0.9789    0.9700
+field_test                0.2945    0.2105
+gap (lab - field)         0.6844    0.7595
+
+floors: chance 0.10; always 'Tomato___Tomato_Yellow_Leaf_Curl_Virus' test 0.3139, field_test 0.0815
+
+per-class accuracy
+  Potato___Early_blight                    lab 0.993   field 0.288
+  Potato___Late_blight                     lab 0.973   field 0.091
+  Tomato___Bacterial_spot                  lab 0.984   field 0.000
+  Tomato___Early_blight                    lab 0.900   field 0.542
+  Tomato___Late_blight                     lab 0.986   field 0.761
+  Tomato___Leaf_Mold                       lab 0.944   field 0.138
+  Tomato___Septoria_leaf_spot              lab 0.951   field 0.215
+  Tomato___Tomato_Yellow_Leaf_Curl_Virus   lab 0.999   field 0.510
+  Tomato___Tomato_mosaic_virus             lab 0.964   field 0.000
+  Tomato___healthy                         lab 0.996   field 0.000
+
+confusion matrix, test (rows = true class, columns = predicted)
+                  0     1     2     3     4     5     6     7     8     9
+0 P:Early_blig  149     0     0     0     0     0     1     0     0     0
+1 P:Late_bligh    0   146     0     0     3     0     1     0     0     0
+2 T:Bacterial_    0     0   314     1     0     0     2     2     0     0
+3 T:Early_blig    0     0     0   135     4     1     3     0     2     5
+4 T:Late_bligh    0     1     0     3   281     0     0     0     0     0
+5 T:Leaf_Mold     0     0     2     1     2   135     1     1     1     0
+6 T:Septoria_l    2     0     0     5     1     3   253     2     0     0
+7 T:Tomato_Yel    0     0     1     0     0     0     0   803     0     0
+8 T:Tomato_mos    0     0     0     0     0     2     0     0    54     0
+9 T:healthy       0     0     0     0     1     0     0     0     0   237
+
+confusion matrix, field_test (rows = true class, columns = predicted)
+                  0     1     2     3     4     5     6     7     8     9
+0 P:Early_blig   15     6     0    13    15     1     0     2     0     0
+1 P:Late_bligh    6     7     0    13    46     2     2     0     0     1
+2 T:Bacterial_    7     0     0    17     8     1    10     1     0     1
+3 T:Early_blig    4     1     2    32    11     5     3     1     0     0
+4 T:Late_bligh    1     3     0    10    67     2     2     3     0     0
+5 T:Leaf_Mold     3     1     1     6    30     8     3     6     0     0
+6 T:Septoria_l   13     2     2    35    17     6    23     9     0     0
+7 T:Tomato_Yel    1     0     0     6    13     2     0    25     0     2
+8 T:Tomato_mos    1     0     0     2    15     3     3     6     0     1
+9 T:healthy       0     1     0     2    21     6     0     5     0     0

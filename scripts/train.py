@@ -18,7 +18,7 @@ from leafshift.data import load_cache_meta
 from leafshift.evaluate import print_report, save_results
 from leafshift.run import seed_everything, start_run
 
-TRAINERS = {"svm": svm.train_and_evaluate, "cnn": cnn.train_and_evaluate}
+TRAINERS = {"svm": svm.train_and_evaluate, "cnn": cnn.train_and_evaluate, "effnet_b0": cnn.train_and_evaluate}
 
 
 def main() -> None:

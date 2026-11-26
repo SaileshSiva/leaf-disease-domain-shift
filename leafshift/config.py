@@ -23,6 +23,8 @@ MODELS = {
     "svm": {"type": str, "C_grid": [NUMBER], "max_iter": int},
     "cnn": {"type": str, "channels": [int], "dropout": NUMBER, "lr": NUMBER, "weight_decay": NUMBER,
             "batch_size": int, "max_epochs": int, "patience": int},
+    "effnet_b0": {"type": str, "pretrained": bool, "freeze_backbone": bool, "dropout": NUMBER, "lr": NUMBER,
+                  "weight_decay": NUMBER, "batch_size": int, "max_epochs": int, "patience": int},
 }
 
 
@@ -66,6 +68,8 @@ def load_config(path: str | Path) -> dict:
     if model_type not in MODELS:
         raise ConfigError(f"{path.name}: model.type {model_type!r} is not one of {sorted(MODELS)}")
     _check(cfg["model"], MODELS[model_type], f"{path.name}: model")
+    if cfg["model"].get("freeze_backbone") and not cfg["model"]["pretrained"]:
+        raise ConfigError(f"{path.name}: model: freeze_backbone = true needs pretrained = true")
     return {"name": path.stem, **cfg}
 
 

@@ -25,6 +25,12 @@ This project measures that lab-to-field gap on a fixed set of tomato and potato 
 
 Neither dataset is committed to this repository.
 
+## Pretrained weights
+
+| Model | Weights | Source |
+|---|---|---|
+| EfficientNet-B0 (Tan and Le, 2019) | ImageNet-1K, `EfficientNet_B0_Weights.IMAGENET1K_V1` | [torchvision](https://pytorch.org/vision/stable/models/efficientnet.html); downloaded on first use (20.5 MB) |
+
 ## Setup
 
 ```bash

@@ -16,3 +16,6 @@ venv/
 
 # AI assistant working notes (not a project artefact)
 CLAUDE.md
+
+# Model checkpoints — written into run folders, never committed
+*.pt

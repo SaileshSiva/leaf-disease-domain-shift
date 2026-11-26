@@ -21,6 +21,8 @@ NUMBER = (int, float)
 TOP_LEVEL = {"seed": int, "model": dict}
 MODELS = {
     "svm": {"type": str, "C_grid": [NUMBER], "max_iter": int},
+    "cnn": {"type": str, "channels": [int], "dropout": NUMBER, "lr": NUMBER, "weight_decay": NUMBER,
+            "batch_size": int, "max_epochs": int, "patience": int},
 }
 
 

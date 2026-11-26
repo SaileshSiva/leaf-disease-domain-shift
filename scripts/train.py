@@ -4,21 +4,21 @@
     python scripts/train.py configs/baseline_a.toml --seed 1   # override the config's seed
 
 Writes results/runs/<config name>_seed<N>_<timestamp>/ (see leafshift.run):
-config.toml, log.txt, run.json and metrics.json. Every model is scored on
-both test sets.
+config.toml, log.txt, run.json and metrics.json, plus best.pt for a CNN.
+Every model is scored on both test sets.
 """
 from __future__ import annotations
 
 import argparse
 from pathlib import Path
 
-from leafshift import svm
+from leafshift import cnn, svm
 from leafshift.config import load_config
 from leafshift.data import load_cache_meta
 from leafshift.evaluate import print_report, save_results
 from leafshift.run import seed_everything, start_run
 
-TRAINERS = {"svm": svm.train_and_evaluate}
+TRAINERS = {"svm": svm.train_and_evaluate, "cnn": cnn.train_and_evaluate}
 
 
 def main() -> None:
@@ -34,7 +34,7 @@ def main() -> None:
 
     with start_run(cfg, args.config) as run_dir:
         seed_everything(cfg["seed"])
-        metrics = TRAINERS[cfg["model"]["type"]](cfg, classes)
+        metrics = TRAINERS[cfg["model"]["type"]](cfg, classes, run_dir)
         save_results(run_dir / "metrics.json", metrics)
         print_report(metrics, classes)
 

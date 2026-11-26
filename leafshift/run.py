@@ -100,7 +100,7 @@ def start_run(cfg: dict, config_path: str | Path, runs_dir: Path = RUNS_DIR):
 
     clock = time.perf_counter()
     stdout, stderr = sys.stdout, sys.stderr
-    with (run_dir / "log.txt").open("w") as log:
+    with (run_dir / "log.txt").open("w", buffering=1) as log:  # line-buffered, so a long run can be watched
         sys.stdout, sys.stderr = _Tee(stdout, log), _Tee(stderr, log)
         print(f"run folder: {run_dir.relative_to(REPO_ROOT) if run_dir.is_relative_to(REPO_ROOT) else run_dir}")
         try:

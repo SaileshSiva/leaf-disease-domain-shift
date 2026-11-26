@@ -24,6 +24,7 @@ from __future__ import annotations
 
 import time
 import warnings
+from pathlib import Path
 
 import numpy as np
 from sklearn.exceptions import ConvergenceWarning
@@ -48,7 +49,8 @@ def fit(model, X, y) -> bool:
     return not any(issubclass(w.category, ConvergenceWarning) for w in caught)
 
 
-def train_and_evaluate(cfg: dict, classes: list[str]) -> dict:
+def train_and_evaluate(cfg: dict, classes: list[str], run_dir: Path) -> dict:
+    """run_dir is unused: the SVM saves no weights. Every trainer takes it."""
     seed, m = cfg["seed"], cfg["model"]
 
     start = time.perf_counter()

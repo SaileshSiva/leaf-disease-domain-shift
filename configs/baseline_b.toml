@@ -1,0 +1,13 @@
+# Baseline B: small CNN trained from scratch (leafshift.cnn), no augmentation.
+
+seed = 0
+
+[model]
+type = "cnn"
+channels = [32, 64, 128, 256]  # one conv block per entry
+dropout = 0.3                  # before the final linear layer
+lr = 1e-3                      # AdamW, not tuned
+weight_decay = 1e-4
+batch_size = 64
+max_epochs = 30
+patience = 5                   # stop after this many epochs without a better val macro F1

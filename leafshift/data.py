@@ -10,7 +10,7 @@ shape (N, 224, 224, 3), with a CSV index giving each row's path, class and label
 
 Per item, in this order:
     1. the cached pixels, uint8, channels first (3, 224, 224)
-    2. the optional transform (augmentation, from Day 16), applied to uint8
+    2. the optional transform (leafshift.augment, train split only), applied to uint8
     3. ImageNet normalisation, unless normalize=False
 
 Every CNN uses ImageNet normalisation, including the one trained from scratch,

@@ -18,6 +18,7 @@ from sklearn.metrics import f1_score
 from torch import nn
 from torchvision.models import EfficientNet_B0_Weights, efficientnet_b0
 
+from leafshift import augment
 from leafshift.data import make_loader
 from leafshift.evaluate import EVAL_SPLITS, evaluate
 
@@ -95,7 +96,9 @@ def train_and_evaluate(cfg: dict, classes: list[str], run_dir: Path) -> dict:
     seed, m = cfg["seed"], cfg["model"]
     device = pick_device()
 
-    train = make_loader("train", batch_size=m["batch_size"], seed=seed)
+    aug = cfg.get("augment")
+    transform = augment.build_transform(aug) if aug else None
+    train = make_loader("train", batch_size=m["batch_size"], seed=seed, transform=transform)
     others = {s: make_loader(s, batch_size=m["batch_size"]) for s in ("val", *EVAL_SPLITS)}
     y_val = others["val"].dataset.labels
 
@@ -107,6 +110,7 @@ def train_and_evaluate(cfg: dict, classes: list[str], run_dir: Path) -> dict:
     loss_fn = nn.CrossEntropyLoss()
     print(f"{description}\ndevice {device}, {n_params:,} parameters ({n_trainable:,} trained), "
           f"train {len(train.dataset)}, val {len(y_val)}")
+    print(f"augmentation: {augment.describe(aug) if aug else 'none'}")
 
     history, best = [], {"val_macro_f1": -1.0}
     print(f"\n{'epoch':>5s}{'train loss':>12s}{'val macro F1':>14s}{'seconds':>9s}")
@@ -139,6 +143,7 @@ def train_and_evaluate(cfg: dict, classes: list[str], run_dir: Path) -> dict:
         "trainable_parameters": n_trainable,
         "device": str(device),
         "seed": seed,
+        "augmentation": aug,
         "history": history,
         "best_epoch": best["epoch"],
         "best_val_macro_f1": best["val_macro_f1"],

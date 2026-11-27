@@ -1,0 +1,423 @@
+{
+  "model": "EfficientNet-B0, ImageNet weights, all layers trained",
+  "architecture": "torchvision efficientnet_b0, head: dropout 0.2, linear to 10",
+  "parameters": 4020358,
+  "trainable_parameters": 4020358,
+  "device": "mps",
+  "seed": 1,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.589166418496427,
+      "val_macro_f1": 0.98454063940961,
+      "seconds": 160.93501329100036
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.05567709934428005,
+      "val_macro_f1": 0.9970249404741376,
+      "seconds": 158.99082999999973
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.020085940220469965,
+      "val_macro_f1": 0.9973709798738458,
+      "seconds": 159.9546132079995
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.016292130049974304,
+      "val_macro_f1": 0.9961429544922471,
+      "seconds": 161.2284007090002
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.010274079632031502,
+      "val_macro_f1": 0.997460359785806,
+      "seconds": 161.8274683339996
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.007672232155902068,
+      "val_macro_f1": 0.9971110661085618,
+      "seconds": 163.50493837500017
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.0074909654595188635,
+      "val_macro_f1": 0.9974420642671044,
+      "seconds": 165.74310250000053
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.007553363483235719,
+      "val_macro_f1": 0.9973012129834663,
+      "seconds": 166.2589090419997
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.0071350883103642624,
+      "val_macro_f1": 0.9981196918766022,
+      "seconds": 174.63167724999948
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.005452817192470202,
+      "val_macro_f1": 0.9981142382473213,
+      "seconds": 170.121224042
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.0024755925259958983,
+      "val_macro_f1": 0.9986378456008016,
+      "seconds": 163.84894974999952
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.005795110113827084,
+      "val_macro_f1": 0.9991458173588939,
+      "seconds": 161.112097792
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.00496085949218099,
+      "val_macro_f1": 0.9974355195283714,
+      "seconds": 188.3578721669992
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.005531121688091482,
+      "val_macro_f1": 0.9976056711250093,
+      "seconds": 170.63236695900014
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.003856106295912512,
+      "val_macro_f1": 1.0,
+      "seconds": 180.87175779100016
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.005476200107808804,
+      "val_macro_f1": 0.9967282279826126,
+      "seconds": 170.06942883300053
+    },
+    {
+      "epoch": 17,
+      "train_loss": 0.004185675131348077,
+      "val_macro_f1": 0.9992733048856801,
+      "seconds": 182.13160291699933
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.002041656445715438,
+      "val_macro_f1": 0.9984708506904434,
+      "seconds": 178.6871253750005
+    },
+    {
+      "epoch": 19,
+      "train_loss": 0.00368727552647592,
+      "val_macro_f1": 0.9964357826168071,
+      "seconds": 174.56640145899928
+    },
+    {
+      "epoch": 20,
+      "train_loss": 0.002516060860442997,
+      "val_macro_f1": 0.9961009213220848,
+      "seconds": 168.87911775000066
+    }
+  ],
+  "best_epoch": 15,
+  "best_val_macro_f1": 1.0,
+  "epochs_run": 20,
+  "results": {
+    "test": {
+      "n": 2561,
+      "accuracy": 0.9992190550566185,
+      "macro_f1": 0.9992712842157042,
+      "per_class_accuracy": {
+        "Potato___Early_blight": 1.0,
+        "Potato___Late_blight": 0.9933333333333333,
+        "Tomato___Bacterial_spot": 0.9968652037617555,
+        "Tomato___Early_blight": 1.0,
+        "Tomato___Late_blight": 1.0,
+        "Tomato___Leaf_Mold": 1.0,
+        "Tomato___Septoria_leaf_spot": 1.0,
+        "Tomato___Tomato_Yellow_Leaf_Curl_Virus": 1.0,
+        "Tomato___Tomato_mosaic_virus": 1.0,
+        "Tomato___healthy": 1.0
+      },
+      "confusion_matrix": [
+        [
+          150,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          149,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          318,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          150,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          285,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          143,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          266,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          804,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          56,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          238
+        ]
+      ]
+    },
+    "field_test": {
+      "n": 601,
+      "accuracy": 0.23627287853577372,
+      "macro_f1": 0.14314626044536316,
+      "per_class_accuracy": {
+        "Potato___Early_blight": 0.15384615384615385,
+        "Potato___Late_blight": 0.0,
+        "Tomato___Bacterial_spot": 0.022222222222222223,
+        "Tomato___Early_blight": 0.7288135593220338,
+        "Tomato___Late_blight": 0.6704545454545454,
+        "Tomato___Leaf_Mold": 0.0,
+        "Tomato___Septoria_leaf_spot": 0.2336448598130841,
+        "Tomato___Tomato_Yellow_Leaf_Curl_Virus": 0.10204081632653061,
+        "Tomato___Tomato_mosaic_virus": 0.03225806451612903,
+        "Tomato___healthy": 0.0
+      },
+      "confusion_matrix": [
+        [
+          8,
+          1,
+          0,
+          31,
+          7,
+          0,
+          4,
+          0,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          1,
+          36,
+          35,
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          1,
+          20,
+          13,
+          0,
+          8,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          43,
+          12,
+          0,
+          2,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          22,
+          59,
+          0,
+          3,
+          0,
+          0,
+          3
+        ],
+        [
+          1,
+          0,
+          1,
+          21,
+          29,
+          0,
+          3,
+          1,
+          0,
+          2
+        ],
+        [
+          3,
+          0,
+          2,
+          56,
+          19,
+          0,
+          25,
+          1,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          0,
+          17,
+          14,
+          0,
+          4,
+          5,
+          3,
+          4
+        ],
+        [
+          3,
+          0,
+          0,
+          11,
+          10,
+          0,
+          5,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          8,
+          26,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      ]
+    }
+  },
+  "gap_in_domain_minus_field": {
+    "accuracy": 0.7629461765208447,
+    "macro_f1": 0.856125023770341
+  },
+  "floors": {
+    "chance_accuracy": 0.1,
+    "majority_class": "Tomato___Tomato_Yellow_Leaf_Curl_Virus",
+    "majority_accuracy_test": 0.3139398672393596,
+    "majority_accuracy_field_test": 0.08153078202995008
+  }
+}

@@ -1,0 +1,15 @@
+# EfficientNet-B0 (torchvision), ImageNet weights, every layer trained.
+# Same settings as effnet_b0_scratch.toml; only `pretrained` differs (Ablation 1).
+
+seed = 0
+
+[model]
+type = "effnet_b0"
+pretrained = true              # torchvision IMAGENET1K_V1 weights
+freeze_backbone = false        # whole network trained, BatchNorm in train mode
+dropout = 0.2                  # torchvision's head dropout for these weights
+lr = 1e-4                      # AdamW, lower than the frozen run's 1e-3; not tuned
+weight_decay = 1e-4
+batch_size = 64
+max_epochs = 30
+patience = 5                   # stop after this many epochs without a better val macro F1

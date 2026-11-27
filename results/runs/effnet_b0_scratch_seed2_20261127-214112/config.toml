@@ -1,0 +1,15 @@
+# EfficientNet-B0 (torchvision), random initialisation, every layer trained.
+# Same settings as effnet_b0_finetune.toml; only `pretrained` differs (Ablation 1).
+
+seed = 0
+
+[model]
+type = "effnet_b0"
+pretrained = false             # random weights, no ImageNet
+freeze_backbone = false        # whole network trained, BatchNorm in train mode
+dropout = 0.2                  # same head as the pretrained model
+lr = 1e-4                      # AdamW, same as the pretrained arm; not tuned
+weight_decay = 1e-4
+batch_size = 64
+max_epochs = 30
+patience = 5                   # stop after this many epochs without a better val macro F1

@@ -1,0 +1,74 @@
+run folder: results/runs/effnet_b0_scratch_seed1_20261127-203858
+EfficientNet-B0, from scratch, all layers trained
+device mps, 4,020,358 parameters (4,020,358 trained), train 11944, val 2561
+
+epoch  train loss  val macro F1  seconds
+    1      1.5893        0.4936      159  *
+    2      0.8489        0.7155      160  *
+    3      0.5555        0.8190      163  *
+    4      0.4068        0.8533      161  *
+    5      0.3157        0.8864      164  *
+    6      0.2630        0.8897      166  *
+    7      0.2141        0.8885      169
+    8      0.1929        0.9181      166  *
+    9      0.1493        0.9217      175  *
+   10      0.1318        0.9041      175
+   11      0.1177        0.8898      167
+   12      0.1113        0.9128      187
+   13      0.0991        0.9192      174
+   14      0.0924        0.9271      171  *
+   15      0.0975        0.9406      170  *
+   16      0.0737        0.9279      172
+   17      0.0800        0.9436      169  *
+   18      0.0652        0.9377      170
+   19      0.0661        0.9323      169
+   20      0.0577        0.9234      171
+   21      0.0589        0.9360      170
+   22      0.0669        0.9322      168
+no improvement for 5 epochs; stopping
+best epoch 17, val macro F1 0.9436
+
+                        accuracy  macro F1
+test                      0.9582    0.9457
+field_test                0.1115    0.0842
+gap (lab - field)         0.8467    0.8615
+
+floors: chance 0.10; always 'Tomato___Tomato_Yellow_Leaf_Curl_Virus' test 0.3139, field_test 0.0815
+
+per-class accuracy
+  Potato___Early_blight                    lab 0.947   field 0.173
+  Potato___Late_blight                     lab 0.900   field 0.000
+  Tomato___Bacterial_spot                  lab 0.978   field 0.067
+  Tomato___Early_blight                    lab 0.840   field 0.390
+  Tomato___Late_blight                     lab 0.895   field 0.148
+  Tomato___Leaf_Mold                       lab 0.958   field 0.000
+  Tomato___Septoria_leaf_spot              lab 0.962   field 0.056
+  Tomato___Tomato_Yellow_Leaf_Curl_Virus   lab 0.995   field 0.163
+  Tomato___Tomato_mosaic_virus             lab 0.946   field 0.000
+  Tomato___healthy                         lab 1.000   field 0.143
+
+confusion matrix, test (rows = true class, columns = predicted)
+                  0     1     2     3     4     5     6     7     8     9
+0 P:Early_blig  142     1     0     3     3     0     1     0     0     0
+1 P:Late_bligh    1   135     0     2     9     0     1     2     0     0
+2 T:Bacterial_    0     2   312     1     0     0     0     4     0     0
+3 T:Early_blig    1     2     1   126    12     0     3     4     1     0
+4 T:Late_bligh    5     6     0     8   255     2     5     2     0     2
+5 T:Leaf_Mold     0     0     0     0     2   137     3     1     0     0
+6 T:Septoria_l    3     1     0     1     4     1   256     0     0     0
+7 T:Tomato_Yel    0     1     0     0     1     1     1   800     0     0
+8 T:Tomato_mos    0     0     0     0     0     0     3     0    53     0
+9 T:healthy       0     0     0     0     0     0     0     0     0   238
+
+confusion matrix, field_test (rows = true class, columns = predicted)
+                  0     1     2     3     4     5     6     7     8     9
+0 P:Early_blig    9     0     4    19    10     2     0     4     0     4
+1 P:Late_bligh   14     0     4    25    15     0     4    11     0     4
+2 T:Bacterial_   10     0     3    20     3     1     0     5     0     3
+3 T:Early_blig   12     0     4    23    10     0     2     3     0     5
+4 T:Late_bligh   11     0     3    31    13     1     5    18     0     6
+5 T:Leaf_Mold     8     0     6    22    11     0     0     7     0     4
+6 T:Septoria_l   24     0    10    42     9     1     6     3     0    12
+7 T:Tomato_Yel   19     0     2    11     2     0     1     8     0     6
+8 T:Tomato_mos    3     0     0    11     3     0     3     9     0     2
+9 T:healthy       4     0     0     6     6     0    10     4     0     5

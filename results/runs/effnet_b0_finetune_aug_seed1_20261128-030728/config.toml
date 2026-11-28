@@ -1,0 +1,29 @@
+# EfficientNet-B0 (torchvision), ImageNet weights, every layer trained, with augmentation.
+# Same as effnet_b0_finetune.toml plus [augment] (Ablation 2). Applied to the training split only.
+
+seed = 0
+
+[model]
+type = "effnet_b0"
+pretrained = true              # torchvision IMAGENET1K_V1 weights
+freeze_backbone = false        # whole network trained, BatchNorm in train mode
+dropout = 0.2                  # torchvision's head dropout for these weights
+lr = 1e-4                      # AdamW, same as effnet_b0_finetune; not tuned
+weight_decay = 1e-4
+batch_size = 64
+max_epochs = 30
+patience = 5                   # stop after this many epochs without a better val macro F1
+
+[augment]                      # common values, not tuned
+crop_scale = [0.5, 1.0]        # random resized crop to 224 px, fraction of the image area
+crop_ratio = [0.75, 1.3333]
+hflip = 0.5
+vflip = 0.5
+rotation = 30                  # degrees, either way; corners filled with the padding colour
+brightness = 0.3
+contrast = 0.3
+saturation = 0.3
+hue = 0.02                     # kept low: leaf colour is part of the diagnosis
+erase_p = 0.25                 # patch filled with the padding colour
+erase_scale = [0.02, 0.33]
+erase_ratio = [0.3, 3.3]

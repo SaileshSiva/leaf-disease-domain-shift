@@ -1,0 +1,31 @@
+# Field fine-tuning: effnet_b0_finetune_aug's best.pt for the same seed, trained further on the
+# 100-photo field_finetune slice. Same model, lr and augmentation as the source run.
+
+seed = 0
+
+[model]
+type = "effnet_b0"
+pretrained = true              # ImageNet init, then replaced by the source checkpoint
+freeze_backbone = false        # whole network trained, BatchNorm in train mode
+dropout = 0.2
+lr = 1e-4                      # AdamW, same as the source run; not tuned
+weight_decay = 1e-4
+batch_size = 25                # source used 64; 25 splits 100 photos into 4 equal batches
+max_epochs = 20                # fixed, not tuned; the last epoch is kept, nothing is selected
+
+[field_finetune]
+source = "effnet_b0_finetune_aug"
+
+[augment]                      # same values as effnet_b0_finetune_aug.toml
+crop_scale = [0.5, 1.0]
+crop_ratio = [0.75, 1.3333]
+hflip = 0.5
+vflip = 0.5
+rotation = 30
+brightness = 0.3
+contrast = 0.3
+saturation = 0.3
+hue = 0.02
+erase_p = 0.25
+erase_scale = [0.02, 0.33]
+erase_ratio = [0.3, 3.3]

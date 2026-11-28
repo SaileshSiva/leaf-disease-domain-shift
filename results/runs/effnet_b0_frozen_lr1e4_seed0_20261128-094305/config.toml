@@ -1,0 +1,15 @@
+# EfficientNet-B0 (torchvision), ImageNet weights, frozen backbone, at the fine-tune run's lr.
+# Same settings as effnet_b0_finetune.toml; only `freeze_backbone` differs (Ablation 3).
+
+seed = 0
+
+[model]
+type = "effnet_b0"
+pretrained = true              # torchvision IMAGENET1K_V1 weights
+freeze_backbone = true         # backbone gets no gradient, BatchNorm kept in eval
+dropout = 0.2                  # torchvision's head dropout for these weights
+lr = 1e-4                      # AdamW, the fine-tune run's rate; not tuned
+weight_decay = 1e-4
+batch_size = 64
+max_epochs = 30
+patience = 5                   # stop after this many epochs without a better val macro F1

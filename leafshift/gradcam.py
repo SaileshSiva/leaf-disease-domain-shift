@@ -1,4 +1,4 @@
-"""Grad-CAM (Selvaraju et al., IJCV 2019) for the predicted class, on the output of model.features.
+"""Grad-CAM (Selvaraju et al., IJCV 2020) for the predicted class, on the output of model.features.
 
     maps, preds = gradcam(model, images)   # maps: (B, H, W) in [0, 1], one per image
 """

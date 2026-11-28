@@ -31,6 +31,10 @@ Neither dataset is committed to this repository.
 |---|---|---|
 | EfficientNet-B0 (Tan and Le, 2019) | ImageNet-1K, `EfficientNet_B0_Weights.IMAGENET1K_V1` | [torchvision](https://pytorch.org/vision/stable/models/efficientnet.html); downloaded on first use (20.5 MB) |
 
+## Methods from other work
+
+- **Grad-CAM** (`leafshift/gradcam.py`, `scripts/gradcam_overlays.py`): Selvaraju, Cogswell, Das, Vedantam, Parikh and Batra (2020), *Grad-CAM: Visual Explanations from Deep Networks via Gradient-Based Localization*, International Journal of Computer Vision 128(2), 336–359, doi:10.1007/s11263-019-01228-7.
+
 ## Setup
 
 ```bash

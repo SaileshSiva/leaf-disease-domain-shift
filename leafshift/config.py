@@ -30,6 +30,10 @@ MODELS = {
 AUGMENT = {"crop_scale": [NUMBER], "crop_ratio": [NUMBER], "hflip": NUMBER, "vflip": NUMBER,
            "rotation": NUMBER, "brightness": NUMBER, "contrast": NUMBER, "saturation": NUMBER, "hue": NUMBER,
            "erase_p": NUMBER, "erase_scale": [NUMBER], "erase_ratio": [NUMBER]}
+# Optional section: continue from another run's best.pt, training on the field_finetune slice
+# for exactly max_epochs and keeping the last epoch, so `patience` is not allowed.
+FIELD_FINETUNE = {"source": str}
+OPTIONAL = ("augment", "field_finetune")
 
 
 class ConfigError(ValueError):
@@ -67,11 +71,15 @@ def load_config(path: str | Path) -> dict:
     path = Path(path)
     with path.open("rb") as f:
         cfg = tomllib.load(f)
-    _check({k: v for k, v in cfg.items() if k != "augment"}, TOP_LEVEL, path.name)
+    _check({k: v for k, v in cfg.items() if k not in OPTIONAL}, TOP_LEVEL, path.name)
     model_type = cfg["model"].get("type")
     if model_type not in MODELS:
         raise ConfigError(f"{path.name}: model.type {model_type!r} is not one of {sorted(MODELS)}")
-    _check(cfg["model"], MODELS[model_type], f"{path.name}: model")
+    spec = MODELS[model_type]
+    if "field_finetune" in cfg:
+        _check_field_finetune(cfg["field_finetune"], model_type, f"{path.name}: field_finetune")
+        spec = {k: v for k, v in spec.items() if k != "patience"}
+    _check(cfg["model"], spec, f"{path.name}: model")
     if cfg["model"].get("freeze_backbone") and not cfg["model"]["pretrained"]:
         raise ConfigError(f"{path.name}: model: freeze_backbone = true needs pretrained = true")
     if "augment" in cfg:
@@ -96,6 +104,14 @@ def _check_augment(a, model_type: str, where: str) -> None:
     for key in ("rotation", "brightness", "contrast", "saturation"):
         if a[key] < 0:
             raise ConfigError(f"{where}: {key} = {a[key]!r} is negative")
+
+
+def _check_field_finetune(f, model_type: str, where: str) -> None:
+    if model_type == "svm":
+        raise ConfigError(f"{where}: the svm model cannot be fine-tuned")
+    if not isinstance(f, dict):
+        raise ConfigError(f"{where}: must be a [field_finetune] section")
+    _check(f, FIELD_FINETUNE, where)
 
 
 if __name__ == "__main__":

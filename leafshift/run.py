@@ -19,6 +19,7 @@ command line overrode it.
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 import platform
@@ -76,6 +77,26 @@ class _Tee:
     def flush(self):
         for s in self.streams:
             s.flush()
+
+
+def find_source_run(name: str, seed: int, runs_dir: Path = RUNS_DIR) -> dict:
+    """The one committed, finished run of config `name` with this seed, and its checkpoint."""
+    committed = set(_git("ls-files", str(runs_dir)).splitlines())
+    matches = []
+    for run_json in sorted(runs_dir.glob(f"{name}_seed{seed}_*/run.json")):
+        info = json.loads(run_json.read_text())
+        if (info["name"] == name and info["seed"] == seed and info["status"] == "finished"
+                and str(run_json.relative_to(REPO_ROOT)) in committed):
+            matches.append((run_json.parent, info))
+    if len(matches) != 1:
+        raise FileNotFoundError(f"expected one committed, finished run of {name} with seed {seed}; "
+                                f"found {len(matches)}")
+    run_dir, info = matches[0]
+    checkpoint = run_dir / "best.pt"
+    if not checkpoint.exists():
+        raise FileNotFoundError(f"{checkpoint} is missing; rerun {name} with seed {seed} to recreate it")
+    return {"run": str(run_dir.relative_to(REPO_ROOT)), "git_commit": info["git_commit"],
+            "checkpoint": checkpoint, "checkpoint_sha256": hashlib.sha256(checkpoint.read_bytes()).hexdigest()}
 
 
 @contextmanager

@@ -6,6 +6,10 @@
 A frozen backbone gets no gradient and stays in eval mode while the head
 trains, so its BatchNorm statistics keep their ImageNet values. The test sets
 are never used to choose anything.
+
+With a [field_finetune] section, training starts from the source run's best.pt
+and uses the field_finetune slice for exactly max_epochs; the last epoch is kept,
+and lab val F1 is only recorded.
 """
 from __future__ import annotations
 
@@ -19,8 +23,9 @@ from torch import nn
 from torchvision.models import EfficientNet_B0_Weights, efficientnet_b0
 
 from leafshift import augment
-from leafshift.data import make_loader
+from leafshift.data import CachedSplit, make_loader
 from leafshift.evaluate import EVAL_SPLITS, evaluate
+from leafshift.run import find_source_run
 
 
 class SmallCNN(nn.Module):
@@ -96,20 +101,28 @@ def train_and_evaluate(cfg: dict, classes: list[str], run_dir: Path) -> dict:
     seed, m = cfg["seed"], cfg["model"]
     device = pick_device()
 
-    aug = cfg.get("augment")
+    aug, ff = cfg.get("augment"), cfg.get("field_finetune")
     transform = augment.build_transform(aug) if aug else None
-    train = make_loader("train", batch_size=m["batch_size"], seed=seed, transform=transform)
+    train_split = "field_finetune" if ff else "train"
+    train = make_loader(train_split, batch_size=m["batch_size"], shuffle=True, seed=seed, transform=transform)
     others = {s: make_loader(s, batch_size=m["batch_size"]) for s in ("val", *EVAL_SPLITS)}
     y_val = others["val"].dataset.labels
 
     model, description, architecture = build_model(m, len(classes))
+    if ff:
+        source = find_source_run(ff["source"], seed)
+        checkpoint = torch.load(source.pop("checkpoint"), map_location="cpu")
+        if checkpoint["classes"] != classes:
+            raise ValueError(f"{source['run']} was trained on a different class list")
+        model.load_state_dict(checkpoint["state_dict"])
+        description += f", fine-tuned on the field slice from {source['run']}"
     model = model.to(device)
     trainable = [p for p in model.parameters() if p.requires_grad]
     n_params, n_trainable = sum(p.numel() for p in model.parameters()), sum(p.numel() for p in trainable)
     optimiser = torch.optim.AdamW(trainable, lr=m["lr"], weight_decay=m["weight_decay"])
     loss_fn = nn.CrossEntropyLoss()
     print(f"{description}\ndevice {device}, {n_params:,} parameters ({n_trainable:,} trained), "
-          f"train {len(train.dataset)}, val {len(y_val)}")
+          f"{train_split} {len(train.dataset)}, val {len(y_val)}")
     print(f"augmentation: {augment.describe(aug) if aug else 'none'}")
 
     history, best = [], {"val_macro_f1": -1.0}
@@ -120,15 +133,22 @@ def train_and_evaluate(cfg: dict, classes: list[str], run_dir: Path) -> dict:
         val_f1 = float(f1_score(y_val, predict(model, others["val"], device), average="macro"))
         seconds = time.perf_counter() - start
         history.append({"epoch": epoch, "train_loss": train_loss, "val_macro_f1": val_f1, "seconds": seconds})
-        improved = val_f1 > best["val_macro_f1"]
+        improved = not ff and val_f1 > best["val_macro_f1"]
         print(f"{epoch:>5d}{train_loss:>12.4f}{val_f1:>14.4f}{seconds:>9.0f}{'  *' if improved else ''}")
+        if ff:
+            continue
         if improved:
             best = {"epoch": epoch, "val_macro_f1": val_f1,
                     "state": {k: v.detach().cpu().clone() for k, v in model.state_dict().items()}}
         elif epoch - best["epoch"] >= m["patience"]:
             print(f"no improvement for {m['patience']} epochs; stopping")
             break
-    print(f"best epoch {best['epoch']}, val macro F1 {best['val_macro_f1']:.4f}")
+    if ff:
+        best = {"epoch": len(history), "val_macro_f1": history[-1]["val_macro_f1"],
+                "state": {k: v.detach().cpu().clone() for k, v in model.state_dict().items()}}
+        print(f"kept last epoch {best['epoch']}, val macro F1 {best['val_macro_f1']:.4f}")
+    else:
+        print(f"best epoch {best['epoch']}, val macro F1 {best['val_macro_f1']:.4f}")
 
     model.load_state_dict(best["state"])
     torch.save({"state_dict": best["state"], "model": m, "classes": classes,
@@ -136,6 +156,8 @@ def train_and_evaluate(cfg: dict, classes: list[str], run_dir: Path) -> dict:
 
     y_true = {s: others[s].dataset.labels for s in EVAL_SPLITS}
     y_pred = {s: predict(model, others[s], device) for s in EVAL_SPLITS}
+    y_lab_train = CachedSplit("train").labels if ff else train.dataset.labels
+    extra = {"field_finetune": {"source": ff["source"], **source}} if ff else {}
     return {
         "model": description,
         "architecture": architecture,
@@ -148,5 +170,6 @@ def train_and_evaluate(cfg: dict, classes: list[str], run_dir: Path) -> dict:
         "best_epoch": best["epoch"],
         "best_val_macro_f1": best["val_macro_f1"],
         "epochs_run": len(history),
-        **evaluate(y_true, y_pred, classes, train.dataset.labels),
+        **extra,
+        **evaluate(y_true, y_pred, classes, y_lab_train),
     }
